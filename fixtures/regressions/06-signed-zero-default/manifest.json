@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "06-signed-zero-default",
+  "expected": "regression",
+  "description": "Positive zero and a negative-zero fallback have distinct observable signs.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Positive zero and a negative-zero fallback have distinct observable signs."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "1fb555d6ba7476d9f6817d3ad090e5807153511315ce2e585ad81b0cd0e77e1a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "0cd6bc63d9f658b5c554c0766d642014926c502b6c0217216e5cd1d11601c3e9"
+  }
+}

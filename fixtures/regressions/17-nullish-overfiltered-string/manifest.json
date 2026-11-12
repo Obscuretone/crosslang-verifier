@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "17-nullish-overfiltered-string",
+  "expected": "regression",
+  "description": "Over-filtering a nullish fallback incorrectly drops present falsy values.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Over-filtering a nullish fallback incorrectly drops present falsy values.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "witness": {
+    "kind": "string",
+    "value": ""
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "eec79b05d174f3a423d1d97832aa1f0223c204e554cbdd37931c8da2ba186cf7"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "14f194d5c178ec3aaceeb6966e522fe780a0fefd73d2664deb243fbddd871e09"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "13-zero-offset",
+  "expected": "regression",
+  "description": "A zero offset differs from the negative fractional fallback.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. A zero offset differs from the negative fractional fallback."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "53fce0ba1909e21c74e012cd100e399e1dd5106fea8e6f4d8325eb65eec970e5"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "c9ce2bde6a5be03d0b75e62e043f900ee974ed8bcbd55f811ec96e3151065396"
+  }
+}

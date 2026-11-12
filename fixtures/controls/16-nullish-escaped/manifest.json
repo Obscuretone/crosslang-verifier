@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "16-nullish-escaped",
+  "expected": "control",
+  "description": "String quoting, tabs and backslashes round-trip.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. String quoting, tabs and backslashes round-trip."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "3679d1e3089dc1e18d563c84732729a76a04e730c425dc02f1c98d59e018b39a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "e17fd46b1bd15ab7ab0d7fa51d44c639b93b305a470efa262faf0d2ed056e295"
+  }
+}

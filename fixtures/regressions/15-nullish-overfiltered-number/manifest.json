@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "15-nullish-overfiltered-number",
+  "expected": "regression",
+  "description": "Over-filtering a nullish fallback incorrectly drops present falsy values.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Over-filtering a nullish fallback incorrectly drops present falsy values.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "cd4ed450145f72a2544a0bdd3b5955b96499cb1389da711039108bb95d78d2ea"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "34441f6161ffca2ddce4db61c8abd18c04643007f3068dbdebfeb563b1eafb38"
+  }
+}

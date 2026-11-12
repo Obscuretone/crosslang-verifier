@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "10-positive-restricted",
+  "expected": "control",
+  "description": "Declared inputs are positive numbers or missing.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Declared inputs are positive numbers or missing.",
+    "allowed_inputs": [
+      {
+        "kind": "number",
+        "value": "1"
+      },
+      {
+        "kind": "number",
+        "value": "2"
+      },
+      {
+        "kind": "number",
+        "value": "0.5"
+      },
+      {
+        "kind": "null",
+        "value": null
+      },
+      {
+        "kind": "undefined",
+        "value": null
+      }
+    ]
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "04b3b4f3248ab89fa03d3ea3322dabc1245e65297e7e6220e7addae95e85199a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "ad10f16f93d898724807880bc75c16210444c8f05f844e768bff7ae9267653e8"
+  }
+}

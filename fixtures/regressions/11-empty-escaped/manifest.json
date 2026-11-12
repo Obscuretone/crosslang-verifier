@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "11-empty-escaped",
+  "expected": "regression",
+  "description": "Escaped fallback text must survive both harnesses.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Escaped fallback text must survive both harnesses."
+  },
+  "witness": {
+    "kind": "string",
+    "value": ""
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "5320fc15170bf4704dcedabfc462189ffb9d4cd9fdf56e6e6faba41273c9792c"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "468e37b0d803b0452c8b26ccd68269fcf51fad503c038f863e4a96c8c7bd87e4"
+  }
+}

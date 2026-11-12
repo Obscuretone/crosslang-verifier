@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "01-nullish-number",
+  "expected": "control",
+  "description": "Nullish and Option fallback preserve present falsy primitives.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Nullish and Option fallback preserve present falsy primitives."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "fa90e6424766b02aac261e23140066a0009c329dd3b7b3de052989077811f8b0"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "71523e65c5862a9fcb2b4f26a799d5e17c26c87f1d25ec85fc98336878d8c6cd"
+  }
+}

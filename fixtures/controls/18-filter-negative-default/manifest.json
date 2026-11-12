@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "18-filter-negative-default",
+  "expected": "control",
+  "description": "A negative fractional fallback is preserved by explicit truthiness filtering.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. A negative fractional fallback is preserved by explicit truthiness filtering.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "83ed13ca0598ae293951c43ae7978b4e548b5988ee5a8e6d15f1550c06246f03"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "2919540f205032208fdc52316e2c7f4a5c1bc8ac1c4462905430231546346fcc"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "10-empty-unicode",
+  "expected": "regression",
+  "description": "Unicode fallback is observed only in TypeScript for an empty input.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Unicode fallback is observed only in TypeScript for an empty input."
+  },
+  "witness": {
+    "kind": "string",
+    "value": ""
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "c1604b1a184b539b484ac54a35eb9a1fb41df8ba9483d546b63cd451b667cff8"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "0d4a9a9761a4cebf8d08a4d1b5630d1feff17de503fc215e14d11c3985a2dc1a"
+  }
+}

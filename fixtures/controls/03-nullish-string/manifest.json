@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "03-nullish-string",
+  "expected": "control",
+  "description": "Nullish and Option fallback preserve present falsy primitives.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Nullish and Option fallback preserve present falsy primitives."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "420ea2e6e854eea74ec4545d3abadf7c53a76b351a6a756a58385e31b5ea982b"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "49338408eb67c74868d76a7697d6cb777eaab6bf3cceb0f621e690d570ec7560"
+  }
+}

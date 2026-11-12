@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "18-changed-missing-number",
+  "expected": "regression",
+  "description": "Different literal defaults diverge on missing numbers.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Different literal defaults diverge on missing numbers."
+  },
+  "witness": {
+    "kind": "null",
+    "value": null
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "7e55dd54220847fb65eba7454edfffe5f90268718c531b05d49a834471a195d9"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "3b26f13d54e6554035fe8fec732a0cafdfa9858f6d785b0500aa846912f8a977"
+  }
+}

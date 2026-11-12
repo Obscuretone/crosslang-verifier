@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "07-disabled-flag",
+  "expected": "regression",
+  "description": "False flag is replaced by true by logical OR.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. False flag is replaced by true by logical OR."
+  },
+  "witness": {
+    "kind": "boolean",
+    "value": false
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "72a187b98ed7ec1c0ce749f941554a5a39c54b1ea128ad7a375ea23808c97de5"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "ccb8278b305216d19162daf4d6efd43528bb40c08f5b35f36af44f0afb960105"
+  }
+}

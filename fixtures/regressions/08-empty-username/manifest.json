@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "08-empty-username",
+  "expected": "regression",
+  "description": "Empty username triggers the TypeScript default.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Empty username triggers the TypeScript default."
+  },
+  "witness": {
+    "kind": "string",
+    "value": ""
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "ef9f407a14c562c2b85c9a562a294772490a486dbf6f7ec1ba544a3992b8a74a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "49338408eb67c74868d76a7697d6cb777eaab6bf3cceb0f621e690d570ec7560"
+  }
+}

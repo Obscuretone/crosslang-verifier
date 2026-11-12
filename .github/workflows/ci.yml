@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Python ${{ matrix.python }} / ${{ matrix.backend }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - python: '3.11'
+            backend: local
+          - python: '3.13'
+            backend: docker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Install package and checks
+        run: python -m pip install -e '.[dev]' -c requirements-dev.lock
+      - name: Download isolated runner images
+        if: matrix.backend == 'docker'
+        run: |
+          docker pull node:22-bookworm-slim
+          docker pull rust:1-slim-bookworm
+      - name: Lint and package
+        run: |
+          ruff check .
+          ruff format --check .
+          python -m build
+      - name: Verify fixture generator is reproducible
+        run: |
+          python tools/generate_fixtures.py
+          git diff --exit-code -- fixtures
+      - name: Run all tests with real Node and Cargo
+        run: |
+          mkdir -p ci-evidence
+          pytest -q --run-integration --integration-backend=${{ matrix.backend }} \
+            --cov=obscuretone_semantic_diff --cov-fail-under=85 \
+            --cov-report=term-missing --cov-report=json:ci-evidence/coverage.json \
+            --junitxml=ci-evidence/pytest.xml
+      - name: Emit complete CLI corpus evidence
+        run: |
+          obscuretone-diff suite fixtures --execute --backend=${{ matrix.backend }} \
+            --json-output ci-evidence/corpus.json > ci-evidence/corpus-console.txt
+      - name: Record runtime provenance
+        if: always()
+        run: python tools/record_environment.py --backend=${{ matrix.backend }} --output ci-evidence/environment.json
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidence-py${{ matrix.python }}-${{ matrix.backend }}
+          path: ci-evidence/
+          retention-days: 30

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "05-filter-bool",
+  "expected": "control",
+  "description": "Explicit Option filtering reproduces primitive logical-OR truthiness.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Explicit Option filtering reproduces primitive logical-OR truthiness.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "72a187b98ed7ec1c0ce749f941554a5a39c54b1ea128ad7a375ea23808c97de5"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "80b73f1409462c7adbe39abf2f2a0f44379562a0d5989e02816cf6854d7afc92"
+  }
+}

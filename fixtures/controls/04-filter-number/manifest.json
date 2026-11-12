@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "04-filter-number",
+  "expected": "control",
+  "description": "Explicit Option filtering reproduces primitive logical-OR truthiness.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Explicit Option filtering reproduces primitive logical-OR truthiness.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "94dd21437b7ffaf55f906f5119ef06b70a1b1cb93b8b1845741fdeca52eee5c6"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "45cc97e8044f96843c9e6bc4f9239d997d6bae561a9172e60c8466f5185d088b"
+  }
+}

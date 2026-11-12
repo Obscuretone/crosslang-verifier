@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "14-nan-zero-default",
+  "expected": "regression",
+  "description": "A zero fallback still changes NaN under logical OR.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. A zero fallback still changes NaN under logical OR."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "NaN"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "94bc8dfc05f5e2dfad6f7277968244e66f5e0a1208eb66e2ce5d74cbc68ed299"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "f0090523ce49ec918d072a52a28847bd9dc2efbd95dffead0f229374c27dbbb7"
+  }
+}

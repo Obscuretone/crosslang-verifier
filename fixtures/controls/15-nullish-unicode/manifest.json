@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "15-nullish-unicode",
+  "expected": "control",
+  "description": "Unicode strings map losslessly within the shared domain.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Unicode strings map losslessly within the shared domain."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "7526f45576ef9be2d1762280783c6010697374625cb0e12fd086bc9472e14b81"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "e3a1ea004a0a09331fe9894b0f7002014ee490af89567e6e15a3b53fe10a9c5b"
+  }
+}

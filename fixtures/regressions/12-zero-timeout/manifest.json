@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "12-zero-timeout",
+  "expected": "regression",
+  "description": "A zero timeout is interpreted as absent by logical OR.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. A zero timeout is interpreted as absent by logical OR."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "95b9e20c366a3c8394aa00d4316d1ae0bbb240e851b0994032a28c20578e1a79"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "90527ea184bed03d89b919e09d012f66ada02385d14ec3c35b0813c7a90963bc"
+  }
+}

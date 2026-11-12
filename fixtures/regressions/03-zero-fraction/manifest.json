@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "03-zero-fraction",
+  "expected": "regression",
+  "description": "Zero rate is replaced by a fractional default.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Zero rate is replaced by a fractional default."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "75927a6ac8b44a6b78439176be362cfc4677e65da11d6be7e2651839bb8e01a9"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "95d70233339189046f23fa201017222e758c7e77150b3233b9412774a549fd78"
+  }
+}

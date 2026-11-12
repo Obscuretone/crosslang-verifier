@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "17-filter-zero-default",
+  "expected": "control",
+  "description": "Filtering NaN and negative zero matters even with a zero default.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Filtering NaN and negative zero matters even with a zero default.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "94bc8dfc05f5e2dfad6f7277968244e66f5e0a1208eb66e2ce5d74cbc68ed299"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "7b18356ac8d146c86304750d883b482c0afe5e9bc46c10a0382600504e3c152e"
+  }
+}

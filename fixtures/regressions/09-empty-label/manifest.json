@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "09-empty-label",
+  "expected": "regression",
+  "description": "Empty display label is present in Option.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Empty display label is present in Option."
+  },
+  "witness": {
+    "kind": "string",
+    "value": ""
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "09b7c41ab9a20ec7e3dfbb19a928c46b8b259cc71ea37f77da9baff10eeb68d0"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "1e8da032a3759c10bc22a2dcf4c46119b3b77165a752f8c198b4cf48c4012d77"
+  }
+}

@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "obscuretone-semantic-diff"
+version = "0.1.0"
+description = "Evidence-first semantic regression checks for TypeScript to Rust migrations"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "ObscureTone"}]
+dependencies = [
+  "tree-sitter>=0.25,<0.27",
+  "tree-sitter-typescript>=0.23,<0.24",
+  "tree-sitter-rust>=0.24,<0.25",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.12,<1", "build>=1,<2"]
+
+[project.scripts]
+obscuretone-diff = "obscuretone_semantic_diff.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/obscuretone_semantic_diff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: executes actual Node and Cargo implementations"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

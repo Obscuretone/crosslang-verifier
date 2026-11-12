@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "19-changed-missing-bool",
+  "expected": "regression",
+  "description": "Different boolean defaults diverge on undefined.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Different boolean defaults diverge on undefined."
+  },
+  "witness": {
+    "kind": "undefined",
+    "value": null
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "7c0abde888a0d7a2dd98b4c46067e2c7f2c364437e1c4efc7d78ed542d1ee72c"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "ccb8278b305216d19162daf4d6efd43528bb40c08f5b35f36af44f0afb960105"
+  }
+}

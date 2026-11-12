@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "20-filter-empty-default",
+  "expected": "control",
+  "description": "Filtered empty strings yield the same empty fallback.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Filtered empty strings yield the same empty fallback.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "2272161404d80e8e0abe43fd5a81114db6c8274a2153ee85d6131334dbed344a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "efcff7d8e9d7175afc181e1dcf083ab593d94b7836a4dcff29be6b2a9232cb4e"
+  }
+}

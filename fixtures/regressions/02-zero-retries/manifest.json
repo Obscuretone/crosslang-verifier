@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "02-zero-retries",
+  "expected": "regression",
+  "description": "A zero retry budget is replaced by a negative sentinel.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. A zero retry budget is replaced by a negative sentinel."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "0"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "244db15d37e14eb62557216dc7426b64da2dc98114d230bd93f300f480e4edb0"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "246c4da37fb99e76bdf7ec3196a5d217d878c3c36ecd61eaf1d4d2eff8470eb2"
+  }
+}

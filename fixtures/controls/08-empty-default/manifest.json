@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "08-empty-default",
+  "expected": "control",
+  "description": "Replacing an empty string by an empty string preserves the observation.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Replacing an empty string by an empty string preserves the observation."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "2272161404d80e8e0abe43fd5a81114db6c8274a2153ee85d6131334dbed344a"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "8ff38d6eefbab9a8e6cb25f304b70be8d71cdd6f1839dd2df02f10efc2f222b0"
+  }
+}

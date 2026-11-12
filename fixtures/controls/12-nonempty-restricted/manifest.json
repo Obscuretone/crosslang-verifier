@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "12-nonempty-restricted",
+  "expected": "control",
+  "description": "Declared present strings are nonempty, including whitespace.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Declared present strings are nonempty, including whitespace.",
+    "allowed_inputs": [
+      {
+        "kind": "string",
+        "value": "x"
+      },
+      {
+        "kind": "string",
+        "value": "0"
+      },
+      {
+        "kind": "string",
+        "value": " "
+      },
+      {
+        "kind": "null",
+        "value": null
+      },
+      {
+        "kind": "undefined",
+        "value": null
+      }
+    ]
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "fe96648ae1b4abfc3ddd1064b5e549016cd6c59cf8a61fa166fec63d7c6d50fb"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "fff1fb070143951844b15ca7a8606bdc4e3e88f95e3693ae2ba988c7660a09be"
+  }
+}

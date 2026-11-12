@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "07-false-default",
+  "expected": "control",
+  "description": "Replacing false by false preserves the observation.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Replacing false by false preserves the observation."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "587e82c6b48a643ecb92254966e51bd8c83d92720c114928f58eaeef3177dc21"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "a484906d985dc1ac1cb44bb7c58950ce95d13d2e416b40b9270c12bd30b723ee"
+  }
+}

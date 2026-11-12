@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "05-nan-reading",
+  "expected": "regression",
+  "description": "NaN is falsy but is a present Rust floating-point value.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. NaN is falsy but is a present Rust floating-point value."
+  },
+  "witness": {
+    "kind": "number",
+    "value": "NaN"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "ae3cd0d05f121f249b3e020e95a679633b327bd5151f2664cec41c7eb4e62091"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "ca1947e0b3d528c223a73e0580a87e4ac9eb69af7e14d229ddbe02c715d37bb2"
+  }
+}

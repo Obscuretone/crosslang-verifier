@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "11-true-restricted",
+  "expected": "control",
+  "description": "Declared inputs contain no present false value.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Declared inputs contain no present false value.",
+    "allowed_inputs": [
+      {
+        "kind": "boolean",
+        "value": true
+      },
+      {
+        "kind": "null",
+        "value": null
+      },
+      {
+        "kind": "undefined",
+        "value": null
+      }
+    ]
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "72a187b98ed7ec1c0ce749f941554a5a39c54b1ea128ad7a375ea23808c97de5"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "ccb8278b305216d19162daf4d6efd43528bb40c08f5b35f36af44f0afb960105"
+  }
+}

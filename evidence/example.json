@@ -1,0 +1,346 @@
+{
+  "pair_id": "01-zero-count",
+  "status": "confirmed_difference",
+  "sources": {
+    "typescript": "94dd21437b7ffaf55f906f5119ef06b70a1b1cb93b8b1845741fdeca52eee5c6",
+    "rust": "71523e65c5862a9fcb2b4f26a799d5e17c26c87f1d25ec85fc98336878d8c6cd"
+  },
+  "manifest_sha256": "6fd33960c36cbd0ac4f72f472079e1c5b2f58777356b0875df32cbbc568e1db7",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Zero count is replaced by a default in TypeScript."
+  },
+  "resolution": {
+    "domain": "number",
+    "rust_inner": "f64",
+    "evidence": {
+      "provider": "explicit_fixture_assumptions",
+      "compiler_verified": false,
+      "method": "std::option::Option::unwrap_or",
+      "source_hashes_validated": true,
+      "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Zero count is replaced by a default in TypeScript."
+    },
+    "allowed_inputs": null
+  },
+  "ir": [
+    {
+      "language": "typescript",
+      "function": "evaluate",
+      "parameter": "x",
+      "parameter_type": "number|null|undefined",
+      "trigger": "falsy",
+      "fallback": {
+        "kind": "number",
+        "value": "10.0"
+      },
+      "span": {
+        "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.ts",
+        "start_line": 2,
+        "start_column": 12,
+        "end_line": 2,
+        "end_column": 19
+      },
+      "source_sha256": "94dd21437b7ffaf55f906f5119ef06b70a1b1cb93b8b1845741fdeca52eee5c6"
+    },
+    {
+      "language": "rust",
+      "function": "evaluate",
+      "parameter": "x",
+      "parameter_type": "std::option::Option<f64>",
+      "trigger": "none",
+      "fallback": {
+        "kind": "number",
+        "value": "10.0"
+      },
+      "span": {
+        "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.rs",
+        "start_line": 2,
+        "start_column": 5,
+        "end_line": 2,
+        "end_column": 22
+      },
+      "source_sha256": "71523e65c5862a9fcb2b4f26a799d5e17c26c87f1d25ec85fc98336878d8c6cd"
+    }
+  ],
+  "assessments": [
+    {
+      "rule_id": "OT-FALLBACK-001",
+      "message": "Resolved fallback policies predict a candidate difference; execution required.",
+      "warning": true
+    }
+  ],
+  "candidates": [
+    {
+      "kind": "number",
+      "value": "0.0"
+    },
+    {
+      "kind": "number",
+      "value": "-0"
+    },
+    {
+      "kind": "number",
+      "value": "NaN"
+    },
+    {
+      "kind": "number",
+      "value": "1.0"
+    },
+    {
+      "kind": "number",
+      "value": "-1.0"
+    },
+    {
+      "kind": "number",
+      "value": "0.5"
+    },
+    {
+      "kind": "number",
+      "value": "Infinity"
+    },
+    {
+      "kind": "number",
+      "value": "-Infinity"
+    },
+    {
+      "kind": "null",
+      "value": null
+    },
+    {
+      "kind": "undefined",
+      "value": null
+    },
+    {
+      "kind": "number",
+      "value": "10.0"
+    }
+  ],
+  "executions": [
+    {
+      "language": "typescript",
+      "status": "ok",
+      "observations": [
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "1.0"
+        },
+        {
+          "kind": "number",
+          "value": "-1.0"
+        },
+        {
+          "kind": "number",
+          "value": "0.5"
+        },
+        {
+          "kind": "number",
+          "value": "Infinity"
+        },
+        {
+          "kind": "number",
+          "value": "-Infinity"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        }
+      ],
+      "commands": [
+        [
+          "/usr/local/bin/docker",
+          "run",
+          "--rm",
+          "--name",
+          "obscuretone-028c9b8074aa45ac89d9fb73ef054e6d",
+          "--pull=never",
+          "--network=none",
+          "--read-only",
+          "--user=65534:65534",
+          "--cap-drop=ALL",
+          "--security-opt=no-new-privileges",
+          "--pids-limit=64",
+          "--memory=512m",
+          "--cpus=1",
+          "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+          "--mount",
+          "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+          "--workdir=/job",
+          "--env=HOME=/tmp",
+          "--env=CARGO_HOME=/tmp/cargo",
+          "node:22-bookworm-slim",
+          "node",
+          "--experimental-strip-types",
+          "harness.mjs"
+        ]
+      ],
+      "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":10,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n",
+      "stderr": "",
+      "error": null,
+      "backend": "docker",
+      "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+    },
+    {
+      "language": "rust",
+      "status": "ok",
+      "observations": [
+        {
+          "kind": "number",
+          "value": "0.0"
+        },
+        {
+          "kind": "number",
+          "value": "-0"
+        },
+        {
+          "kind": "number",
+          "value": "NaN"
+        },
+        {
+          "kind": "number",
+          "value": "1.0"
+        },
+        {
+          "kind": "number",
+          "value": "-1.0"
+        },
+        {
+          "kind": "number",
+          "value": "0.5"
+        },
+        {
+          "kind": "number",
+          "value": "Infinity"
+        },
+        {
+          "kind": "number",
+          "value": "-Infinity"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        },
+        {
+          "kind": "number",
+          "value": "10.0"
+        }
+      ],
+      "commands": [
+        [
+          "/usr/local/bin/docker",
+          "run",
+          "--rm",
+          "--name",
+          "obscuretone-69ebf7c52ec44b17840fcf2c0810db4f",
+          "--pull=never",
+          "--network=none",
+          "--read-only",
+          "--user=65534:65534",
+          "--cap-drop=ALL",
+          "--security-opt=no-new-privileges",
+          "--pids-limit=64",
+          "--memory=512m",
+          "--cpus=1",
+          "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+          "--mount",
+          "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+          "--workdir=/job",
+          "--env=HOME=/tmp",
+          "--env=CARGO_HOME=/tmp/cargo",
+          "rust:1-slim-bookworm",
+          "cargo",
+          "run",
+          "--quiet",
+          "--offline",
+          "--locked",
+          "--target-dir",
+          "/tmp/target"
+        ]
+      ],
+      "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"-0\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"NaN\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n{\"id\":10,\"output\":{\"kind\":\"number\",\"value\":\"10\"}}\n",
+      "stderr": "warning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_string` is never used\n  --> main.rs:28:4\n   |\n28 | fn encode_string(v: &str) -> String {\n   |    ^^^^^^^^^^^^^\n\n",
+      "error": null,
+      "backend": "docker",
+      "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+    }
+  ],
+  "differences": [
+    {
+      "candidate_index": 0,
+      "input": {
+        "kind": "number",
+        "value": "0.0"
+      },
+      "typescript": {
+        "kind": "number",
+        "value": "10.0"
+      },
+      "rust": {
+        "kind": "number",
+        "value": "0.0"
+      }
+    },
+    {
+      "candidate_index": 1,
+      "input": {
+        "kind": "number",
+        "value": "-0"
+      },
+      "typescript": {
+        "kind": "number",
+        "value": "10.0"
+      },
+      "rust": {
+        "kind": "number",
+        "value": "-0"
+      }
+    },
+    {
+      "candidate_index": 2,
+      "input": {
+        "kind": "number",
+        "value": "NaN"
+      },
+      "typescript": {
+        "kind": "number",
+        "value": "10.0"
+      },
+      "rust": {
+        "kind": "number",
+        "value": "NaN"
+      }
+    }
+  ],
+  "limitations": [
+    "Bounded candidates under declared assumptions; no full semantic equivalence."
+  ],
+  "schema_version": "1.0",
+  "equivalence_claim": false
+}

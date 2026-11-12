@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "19-filter-false-default",
+  "expected": "control",
+  "description": "Filtered false values yield the same false default.",
+  "assumptions": {
+    "typescript_type": "boolean|null|undefined",
+    "rust_type": "std::option::Option<bool>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "boolean",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Filtered false values yield the same false default.",
+    "rust_filter_method": "std::option::Option::filter"
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "587e82c6b48a643ecb92254966e51bd8c83d92720c114928f58eaeef3177dc21"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "801e1ed4244bb7f4c1dc347585f88f99161d26588d24908d83d9773c9373ca16"
+  }
+}

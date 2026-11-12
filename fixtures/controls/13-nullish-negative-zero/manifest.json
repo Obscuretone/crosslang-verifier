@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "13-nullish-negative-zero",
+  "expected": "control",
+  "description": "Nullish default preserves both signed zeros and NaN when present.",
+  "assumptions": {
+    "typescript_type": "number|null|undefined",
+    "rust_type": "std::option::Option<f64>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "number",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Nullish default preserves both signed zeros and NaN when present."
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "833c0f08f2ab2be0393329e7135fa5a2576052b307592cef7b2f06f3091d164e"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "0cd6bc63d9f658b5c554c0766d642014926c502b6c0217216e5cd1d11601c3e9"
+  }
+}

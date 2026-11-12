@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "20-changed-missing-string",
+  "expected": "regression",
+  "description": "Migration changes the missing string default.",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "note": "Synthetic standalone fixture: primitives map directly to Some; null and undefined map to None. Migration changes the missing string default."
+  },
+  "witness": {
+    "kind": "null",
+    "value": null
+  },
+  "typescript": {
+    "path": "source.ts",
+    "function": "evaluate",
+    "sha256": "ef68d7a472fcd793359c5975bc7e67914019fd01bb7a197758b5f2c9e0a91bad"
+  },
+  "rust": {
+    "path": "source.rs",
+    "function": "evaluate",
+    "sha256": "770ea4cd35c612965274d1b08543fbcb93fcc5006b34d1506874e212f1c88e39"
+  }
+}
