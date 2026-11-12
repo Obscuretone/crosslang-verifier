@@ -38,7 +38,7 @@
         "value": "10.0"
       },
       "span": {
-        "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.ts",
+        "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.ts",
         "start_line": 2,
         "start_column": 12,
         "end_line": 2,
@@ -57,7 +57,7 @@
         "value": "10.0"
       },
       "span": {
-        "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.rs",
+        "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.rs",
         "start_line": 2,
         "start_column": 5,
         "end_line": 2,
@@ -171,11 +171,11 @@
       ],
       "commands": [
         [
-          "/usr/local/bin/docker",
+          "/usr/bin/docker",
           "run",
           "--rm",
           "--name",
-          "obscuretone-028c9b8074aa45ac89d9fb73ef054e6d",
+          "obscuretone-7b3d351996a2415ab1a5eab4fa83355f",
           "--pull=never",
           "--network=none",
           "--read-only",
@@ -187,7 +187,7 @@
           "--cpus=1",
           "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
           "--mount",
-          "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+          "type=bind,src=/tmp/obscuretone-2azs2wng,dst=/job,readonly",
           "--workdir=/job",
           "--env=HOME=/tmp",
           "--env=CARGO_HOME=/tmp/cargo",
@@ -254,11 +254,11 @@
       ],
       "commands": [
         [
-          "/usr/local/bin/docker",
+          "/usr/bin/docker",
           "run",
           "--rm",
           "--name",
-          "obscuretone-69ebf7c52ec44b17840fcf2c0810db4f",
+          "obscuretone-c416e64385684abb8023e3a657f083f6",
           "--pull=never",
           "--network=none",
           "--read-only",
@@ -270,7 +270,7 @@
           "--cpus=1",
           "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
           "--mount",
-          "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+          "type=bind,src=/tmp/obscuretone-2azs2wng,dst=/job,readonly",
           "--workdir=/job",
           "--env=HOME=/tmp",
           "--env=CARGO_HOME=/tmp/cargo",

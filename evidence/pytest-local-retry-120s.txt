@@ -1,0 +1,27 @@
+........................................................................ [ 40%]
+........................F.
+=================================== FAILURES ===================================
+________________ test_actual_corpus[controls/01-nullish-number] ________________
+
+integration_context = Context(adapters={'typescript': <obscuretone_semantic_diff.adapters.TreeSitterAdapter object at 0x10544b7d0>, 'rust': ...s.RuleRegistry object at 0x10549bd40>, runner=<obscuretone_semantic_diff.runners.IsolatedRunner object at 0x1053afcb0>)
+path = PosixPath('/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/01-nullish-number/manifest.json')
+
+    @pytest.mark.parametrize("path", MANIFESTS, ids=lambda p: f"{p.parent.parent.name}/{p.parent.name}")
+    def test_actual_corpus(integration_context, path):
+        pair = load_pair(path)
+        report = analyze(integration_context, pair, execute=True)
+        status = "confirmed_difference" if pair.expected == "regression" else "no_difference_observed"
+>       assert report.status == status, report.to_dict()
+E       AssertionError: {'pair_id': '01-nullish-number', 'status': 'inconclusive', 'sources': {'typescript': 'fa90e6424766b02aac261e23140066a0...1d25ec85fc98336878d8c6cd'}, 'manifest_sha256': 'ddd6babd94ebdb6c8ed4182a0cc39fece5a967ef74846502bf42f182895845ec', ...}
+E       assert 'inconclusive' == 'no_difference_observed'
+E
+E         - no_difference_observed
+E         + inconclusive
+
+tests/test_integration.py:21: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_integration.py::test_actual_corpus[controls/01-nullish-number]
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! KeyboardInterrupt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/selectors.py:548: KeyboardInterrupt
+(to show a full traceback on KeyboardInterrupt use --full-trace)
+1 failed, 97 passed in 299.33s (0:04:59)

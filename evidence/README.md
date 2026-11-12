@@ -16,7 +16,11 @@ ruff format --check .
 python -m build
 ```
 
-The first fast test run passed 135 tests and explicitly skipped 44 opt-in execution tests. The execution-enabled run and full CLI corpus validation are recorded separately; skipped tests must not be described as executed. See `RESULTS.md` for the final observed totals and any failures/limitations after validation completes.
+**Hosted CI passed 179 tests with zero failures/skips on each of two Python/backend combinations.** All 20 regressions were confirmed and all 20 controls matched their recorded candidates in both jobs. See [`RESULTS.md`](RESULTS.md) for coverage, exact provenance and developer-host limitations.
+
+The first fast host run passed 135 tests and explicitly skipped 44 opt-in execution tests (`pytest-unit.txt`). Separate local Docker attempts encountered inconclusive runner failures; those failed/interrupted runs are retained alongside the successful hosted artifacts. Skipped or interrupted tests are never counted as complete execution.
+
+Top-level corpus, JUnit and coverage files are copies of the hosted Python 3.13 Docker artifact. The top-level environment record describes the macOS host; hosted environments are in `ci/43328393792/`. `provenance.json` identifies every copied artifact and its hashes.
 
 Reports retain original observations, source hashes, candidate identities, commands and stderr. Temporary command directories are ephemeral. Tests use synthetic functions and explicit assumptions, not production migrations. Results support only the recorded input domain. No benchmark performance or full semantic equivalence is claimed.
 

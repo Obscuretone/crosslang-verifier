@@ -61,6 +61,8 @@ Each JSON report contains source and manifest SHA-256 hashes, source spans, decl
 
 The committed [evidence](evidence/README.md) records actual checks, tool versions, limitations and reproducible reports. There are **20 synthetic known regressions and 20 preserving controls** with per-case descriptions and designated regression witnesses. They are a focused correctness corpus, not a production benchmark or a measure of general detection accuracy.
 
+[Validated CI results](evidence/RESULTS.md): **179 tests passed on each of Python 3.11/local and Python 3.13/Docker**, with all 40 corpus expectations met. Docker-job statement coverage was **95.0%**. The macOS developer host had inconclusive Docker runner failures; the evidence records those separately.
+
 ## Resolution is mandatory
 
 The MVP resolver uses **explicit fixture assumptions**, not a TypeScript type checker or rust-analyzer. A parsed annotation or a method named `unwrap_or` alone cannot authorize a semantic rule. A manifest must assert the primitive TypeScript type, Rust `Option` type, standard library method identity, input mapping and justification. These assertions are checked against supported annotations and bound to reviewed source hashes. Assertions remain the author's responsibility; compiler verification is reported as `false`.

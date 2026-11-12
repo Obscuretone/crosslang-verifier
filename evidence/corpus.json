@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "tool_version": "0.1.0",
-  "generated_at": "2026-11-12T23:19:22.174558+00:00",
+  "generated_at": "2026-11-12T23:24:41.336271+00:00",
   "reports": [
     {
       "pair_id": "01-nullish-number",
@@ -43,7 +43,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/01-nullish-number/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/01-nullish-number/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -62,7 +62,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/01-nullish-number/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/01-nullish-number/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -176,11 +176,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-2dfcd0f07c874e2cb48800e4303fe3a6",
+              "obscuretone-f728c6d96014420aa601f2176864c727",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -192,7 +192,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-uth2izfw,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3887ybc6,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -259,11 +259,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-9c7a636194264af2a6d10350bd9f22d8",
+              "obscuretone-ababadea1afc4c4ca146557c59d26b4f",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -275,7 +275,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-uth2izfw,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3887ybc6,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -343,7 +343,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/02-nullish-bool/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/02-nullish-bool/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -362,7 +362,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/02-nullish-bool/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/02-nullish-bool/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -420,11 +420,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-fe9fa2bc9090449eae2c751f585c8e6a",
+              "obscuretone-cd162c05e4614243ad491beca3f080b1",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -436,7 +436,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-g0mpoplb,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-c5kt3q87,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -475,11 +475,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-c818d87ac0ed46d68233c214bacb9d44",
+              "obscuretone-0bae1a743d114595bb72602d268696af",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -491,7 +491,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-g0mpoplb,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-c5kt3q87,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -559,7 +559,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/03-nullish-string/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/03-nullish-string/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -578,7 +578,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/03-nullish-string/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/03-nullish-string/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -676,11 +676,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-9b9ca5aeff944f408246a7c199b7ff65",
+              "obscuretone-c6754d247f054e448f467cd7398a1bf5",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -692,7 +692,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-rf4aqg41,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-t4dsmtse,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -751,11 +751,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-3157f4b6812442a79d35f1c86d6e1f6b",
+              "obscuretone-cd1151ad1cee450bb7670ac2335d5855",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -767,7 +767,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-rf4aqg41,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-t4dsmtse,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -836,7 +836,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/04-filter-number/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/04-filter-number/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -855,7 +855,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/04-filter-number/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/04-filter-number/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -969,11 +969,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-c0ee2a614f4447fe85f7485b1b3b1b8e",
+              "obscuretone-99a5caf744bd42be93e1316173920a2d",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -985,7 +985,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-zp2xppr6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-76wn1opk,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1052,11 +1052,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-29f02ced646e47a184bb54532d4a706f",
+              "obscuretone-e8c7562b602e4de2b4c9e229249cfedc",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1068,7 +1068,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-zp2xppr6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-76wn1opk,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1137,7 +1137,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/05-filter-bool/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/05-filter-bool/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -1156,7 +1156,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/05-filter-bool/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/05-filter-bool/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -1214,11 +1214,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-01fe3a0f4c3b45f0a15ea07923a4f9b9",
+              "obscuretone-4401c9e2d59048a7bcc05de3c187484e",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1230,7 +1230,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-owliv1cr,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-roxo5h35,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1269,11 +1269,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-91edf7122ecc4dc89e31761b37f07b59",
+              "obscuretone-1d999bd0b03641e3826b9840e4b1f8fd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1285,7 +1285,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-owliv1cr,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-roxo5h35,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1354,7 +1354,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/06-filter-string/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/06-filter-string/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -1373,7 +1373,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/06-filter-string/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/06-filter-string/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -1471,11 +1471,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-4d544e79c03f4d21bafd87685de25e85",
+              "obscuretone-ba6d0315101e44d4a9f6cb825f83bb21",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1487,7 +1487,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-tt5qjloa,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-0yk52qf3,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1546,11 +1546,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-5924e0b334c54ad083aaf82131b4c029",
+              "obscuretone-62ecbe19bc7d40b2b91104a5fe5537f8",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1562,7 +1562,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-tt5qjloa,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-0yk52qf3,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1630,7 +1630,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/07-false-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/07-false-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -1649,7 +1649,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/07-false-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/07-false-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -1707,11 +1707,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-2858973ecc7348cab753c15ec7de4ccd",
+              "obscuretone-99d6646f69124f06a20a30d497597b5b",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1723,7 +1723,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-w6p_bwxu,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-rrp6hos9,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1762,11 +1762,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-c4165407ffc14d8ca8f19cfda42f3187",
+              "obscuretone-2b426b238b954a2c87e45497dde73c08",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1778,7 +1778,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-w6p_bwxu,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-rrp6hos9,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -1846,7 +1846,7 @@
             "value": ""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/08-empty-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/08-empty-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -1865,7 +1865,7 @@
             "value": ""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/08-empty-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/08-empty-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -1955,11 +1955,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f6d6459c86d6492cb1bf57b72b57f3a8",
+              "obscuretone-694278756708402aaa8cbdbfb442af37",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -1971,7 +1971,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-_xpitbm_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-a84ok9r_,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2026,11 +2026,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-59e50af211bb4aa5ae8896130dfddbeb",
+              "obscuretone-f4fb5c2ae5df4eedaa1ceb637b2a2c7e",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2042,7 +2042,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-_xpitbm_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-a84ok9r_,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2153,7 +2153,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/09-zero-restricted/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/09-zero-restricted/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -2172,7 +2172,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/09-zero-restricted/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/09-zero-restricted/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -2238,11 +2238,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-9053746c056545568cfc5fcd2cb180a2",
+              "obscuretone-81ea3dc28b6f424fb9857ed2ee44f353",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2254,7 +2254,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-b4bbyl47,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-xmhs534h,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2297,11 +2297,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-391aa266103748e99e700abc0e167a3b",
+              "obscuretone-ed5401c86c5f4b5da1ac792141c5c7eb",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2313,7 +2313,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-b4bbyl47,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-xmhs534h,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2424,7 +2424,7 @@
             "value": "7.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/10-positive-restricted/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/10-positive-restricted/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -2443,7 +2443,7 @@
             "value": "7.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/10-positive-restricted/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/10-positive-restricted/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -2509,11 +2509,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-2d9ef0e9981048b2b21802dbcf9b4e16",
+              "obscuretone-f24b22fbcf27487ba09dc3978a2ef947",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2525,7 +2525,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-mop7l_tl,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bx66xzw7,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2568,11 +2568,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-d9181431167c4528893ef0cc6dad63d5",
+              "obscuretone-411cfbfa81b044dfaa4192e9fe875b22",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2584,7 +2584,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-mop7l_tl,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bx66xzw7,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2679,7 +2679,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/11-true-restricted/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/11-true-restricted/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -2698,7 +2698,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/11-true-restricted/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/11-true-restricted/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -2748,11 +2748,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-2198a763d9c9420a9cd4aeebb2478062",
+              "obscuretone-6df5c70a51b2436a8ceb4169231a6943",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2764,7 +2764,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-39d3tzv_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3d_6xjez,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2799,11 +2799,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-c66c73d2cd024a81a9f249eaf63aac5a",
+              "obscuretone-dd71a18d23e34dd5b4c536f6884392bd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -2815,7 +2815,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-39d3tzv_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3d_6xjez,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -2926,7 +2926,7 @@
             "value": "fallback"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/12-nonempty-restricted/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/12-nonempty-restricted/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -2945,7 +2945,7 @@
             "value": "fallback"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/12-nonempty-restricted/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/12-nonempty-restricted/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -3011,11 +3011,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-9ab3fa026cc34e27832a2d8f7a0f0359",
+              "obscuretone-55d3e1153397488fbc509d390f9c7ca5",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3027,7 +3027,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-qyecmso7,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-o0ai83xp,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3070,11 +3070,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-81554521cf0742e88d9f5f53846cff46",
+              "obscuretone-3aead18c0c1e4da99ce439c71d196786",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3086,7 +3086,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-qyecmso7,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-o0ai83xp,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3154,7 +3154,7 @@
             "value": "-0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/13-nullish-negative-zero/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/13-nullish-negative-zero/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -3173,7 +3173,7 @@
             "value": "-0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/13-nullish-negative-zero/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/13-nullish-negative-zero/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -3279,11 +3279,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f49851a6cb3847fdb035fad001e11396",
+              "obscuretone-c3075f8748ea421ab899625fdd3518af",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3295,7 +3295,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ltslc5e8,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-5dhq7zsg,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3358,11 +3358,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-6225c598271d4f7495d04573d81380a8",
+              "obscuretone-615a99686a594767a3ff3e53e6784690",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3374,7 +3374,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ltslc5e8,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-5dhq7zsg,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3442,7 +3442,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/14-nullish-false/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/14-nullish-false/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -3461,7 +3461,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/14-nullish-false/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/14-nullish-false/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -3519,11 +3519,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-b84d5daf85324931bbf22ff1497f0f53",
+              "obscuretone-7197ba87a874494bbec9ed4b49e1cf3f",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3535,7 +3535,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-kuujhkrl,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bopae0en,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3574,11 +3574,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-1c9bb53c8f6b4d91835e8a3d06e0e5d6",
+              "obscuretone-f37ede82f8ab4a30b02582bc0671d16e",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3590,7 +3590,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-kuujhkrl,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bopae0en,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3658,7 +3658,7 @@
             "value": "\u00e9\u97f3"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/15-nullish-unicode/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/15-nullish-unicode/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -3677,7 +3677,7 @@
             "value": "\u00e9\u97f3"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/15-nullish-unicode/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/15-nullish-unicode/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -3775,11 +3775,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-72f104fb86bd44f7843b222d214ab3c9",
+              "obscuretone-9130accefb1c4efb93e18553280a40b7",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3791,7 +3791,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5x365tr6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-kacchv7q,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3850,11 +3850,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-e98ba839d0b8419f9083cea0d70a20a7",
+              "obscuretone-78ebaddeeb7a467791752db8a017c68b",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -3866,7 +3866,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5x365tr6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-kacchv7q,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -3934,7 +3934,7 @@
             "value": "\t\"\\"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/16-nullish-escaped/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/16-nullish-escaped/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -3953,7 +3953,7 @@
             "value": "\t\"\\"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/16-nullish-escaped/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/16-nullish-escaped/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -4051,11 +4051,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-5370f426330d49deb078a34dd26ff19d",
+              "obscuretone-2eed4a136f9e4afa8ff5f0dcf1145b72",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4067,7 +4067,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-cihrw9o4,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-p83jemq0,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4126,11 +4126,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f16a04424d9e4365bf8334af8756a8a0",
+              "obscuretone-8f61be9627ba49a79502474d2284320e",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4142,7 +4142,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-cihrw9o4,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-p83jemq0,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4211,7 +4211,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/17-filter-zero-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/17-filter-zero-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -4230,7 +4230,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/17-filter-zero-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/17-filter-zero-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -4336,11 +4336,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-5616ece22b2b4acfb560dd56d85645f5",
+              "obscuretone-965a71e9a10b44429b4689b254be4fc4",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4352,7 +4352,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-4jt4v2ks,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3uvgjilf,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4415,11 +4415,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-53a6eecddbc342e2b1196f23b23f6a8e",
+              "obscuretone-b8370941c8554f42ace3fc168d828cfd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4431,7 +4431,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-4jt4v2ks,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3uvgjilf,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4500,7 +4500,7 @@
             "value": "-2.5"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/18-filter-negative-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/18-filter-negative-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -4519,7 +4519,7 @@
             "value": "-2.5"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/18-filter-negative-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/18-filter-negative-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -4633,11 +4633,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-62a9431f2ffb4cc8ba163fc5008b6306",
+              "obscuretone-f9d30607a2424949a1d5341814063d2c",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4649,7 +4649,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ro1rl9j1,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-kjuve1cj,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4716,11 +4716,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-9027570bcc4348cf8c26f1fc85bd7f8d",
+              "obscuretone-48a2ded2e7ed4e60aa639daa220b160d",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4732,7 +4732,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ro1rl9j1,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-kjuve1cj,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4801,7 +4801,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/19-filter-false-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/19-filter-false-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -4820,7 +4820,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/19-filter-false-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/19-filter-false-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -4878,11 +4878,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-ad1057b764744c43bbb91ca40afa937c",
+              "obscuretone-7d27095bf7804c6487dab6d8afac0c4d",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4894,7 +4894,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-i2eth2t_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bsnbha1b,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -4933,11 +4933,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-cbd9dc5b14644182a76128334088d353",
+              "obscuretone-70cc57013bf446f990a73d5b9022d12b",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -4949,7 +4949,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-i2eth2t_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-bsnbha1b,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5018,7 +5018,7 @@
             "value": ""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/20-filter-empty-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/20-filter-empty-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -5037,7 +5037,7 @@
             "value": ""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/20-filter-empty-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/controls/20-filter-empty-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -5127,11 +5127,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-c2daa8bc28bc430ca18c3b3302ccab2a",
+              "obscuretone-622770a38115426185b9b96c9a3a5033",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5143,7 +5143,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-jdj0nqjm,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-rl9cslzd,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5198,11 +5198,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-010ccdb974b549c7ab857210c79bb47e",
+              "obscuretone-27b3ba85ffc743d6911cdb8a8dec7a90",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5214,7 +5214,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-jdj0nqjm,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-rl9cslzd,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5282,7 +5282,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -5301,7 +5301,7 @@
             "value": "10.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/01-zero-count/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -5415,11 +5415,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-028c9b8074aa45ac89d9fb73ef054e6d",
+              "obscuretone-7b3d351996a2415ab1a5eab4fa83355f",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5431,7 +5431,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-2azs2wng,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5498,11 +5498,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-69ebf7c52ec44b17840fcf2c0810db4f",
+              "obscuretone-c416e64385684abb8023e3a657f083f6",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5514,7 +5514,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-fsohxr_m,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-2azs2wng,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5628,7 +5628,7 @@
             "value": "-1.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/02-zero-retries/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/02-zero-retries/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -5647,7 +5647,7 @@
             "value": "-1.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/02-zero-retries/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/02-zero-retries/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -5753,11 +5753,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-acc2443e238346afa103fbe745b06b3d",
+              "obscuretone-d3fd4ff795aa4e91983e9aa6fe999570",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5769,7 +5769,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-51b03xhn,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-oqeb3vc2,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5832,11 +5832,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f119bf1dfdbd46aeb1dabaca6909f9f0",
+              "obscuretone-2f298541f3aa4b3e98411b1149bf093d",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -5848,7 +5848,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-51b03xhn,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-oqeb3vc2,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -5962,7 +5962,7 @@
             "value": "0.25"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/03-zero-fraction/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/03-zero-fraction/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -5981,7 +5981,7 @@
             "value": "0.25"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/03-zero-fraction/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/03-zero-fraction/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -6095,11 +6095,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f0e50680eccb4f428b22c7cf06d209bd",
+              "obscuretone-34952c6f54e6420eaa09f60fdb4d5aee",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6111,7 +6111,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-s9ijxjdi,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-491cmgor,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6178,11 +6178,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-80e79ed1bc1946e78b7f853bd4ae829e",
+              "obscuretone-3406fe3890f545cd83b5ea733cb203fd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6194,7 +6194,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-s9ijxjdi,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-491cmgor,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6308,7 +6308,7 @@
             "value": "1.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/04-negative-zero/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/04-negative-zero/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -6327,7 +6327,7 @@
             "value": "1.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/04-negative-zero/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/04-negative-zero/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -6433,11 +6433,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-be8e82ff841e443fae451839d8f9d2d9",
+              "obscuretone-32923608a1fa475799d87efaba0fe9c1",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6449,7 +6449,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-6iepwn9b,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-i8t3i4ih,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6512,11 +6512,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-46579eb9a02e4d7a9e5976ac60324961",
+              "obscuretone-9deaf1d047834074b603ee978411ddbd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6528,7 +6528,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-6iepwn9b,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-i8t3i4ih,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6642,7 +6642,7 @@
             "value": "42.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/05-nan-reading/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/05-nan-reading/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -6661,7 +6661,7 @@
             "value": "42.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/05-nan-reading/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/05-nan-reading/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -6775,11 +6775,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-8152b1505da74163bb650bb0c877233f",
+              "obscuretone-a4258dbe3a67401e87379f6855e1055f",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6791,7 +6791,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-y5a1846_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-4_nvkcwk,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6858,11 +6858,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-23ab2790c19448119dca719280d18b34",
+              "obscuretone-fc8c60fd509d4d76950c9ee02881975c",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -6874,7 +6874,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-y5a1846_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-4_nvkcwk,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -6988,7 +6988,7 @@
             "value": "-0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/06-signed-zero-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/06-signed-zero-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -7007,7 +7007,7 @@
             "value": "-0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/06-signed-zero-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/06-signed-zero-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -7113,11 +7113,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-7f4976e383cb4105baf3562c8118773a",
+              "obscuretone-dad088ed1abd4fbda3c4b9233485be42",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7129,7 +7129,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-q9d6qynh,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-yh4rl7ne,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7192,11 +7192,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-0b3e84e6f28a4ffca31e849bd3ac80a0",
+              "obscuretone-e82ecc85b8c04d10ad8168c2727b86d6",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7208,7 +7208,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-q9d6qynh,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-yh4rl7ne,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7307,7 +7307,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/07-disabled-flag/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/07-disabled-flag/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -7326,7 +7326,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/07-disabled-flag/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/07-disabled-flag/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -7384,11 +7384,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-3f1402e964e9426db128ad3f9b8e9c46",
+              "obscuretone-071645d00ce549998100d6d445e12ac6",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7400,7 +7400,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-34ml7re8,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-lveq4k6a,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7439,11 +7439,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-08954bbe9f174f79bc9d4fb1d799938a",
+              "obscuretone-0d774552f05643318318f6c282b84850",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7455,7 +7455,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-34ml7re8,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-lveq4k6a,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7539,7 +7539,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/08-empty-username/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/08-empty-username/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -7558,7 +7558,7 @@
             "value": "anonymous"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/08-empty-username/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/08-empty-username/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -7656,11 +7656,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-70d614108ee54b219db66957a5611b90",
+              "obscuretone-f03008bd5e9748fe904da2e8da4da3f1",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7672,7 +7672,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-aznqy6cv,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-19d0dw7f,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7731,11 +7731,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-6a11068e84b046c88945af4e92e228aa",
+              "obscuretone-58d691efe6e3434cbfd7694c3dde4cdd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7747,7 +7747,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-aznqy6cv,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-19d0dw7f,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -7831,7 +7831,7 @@
             "value": "untitled"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/09-empty-label/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/09-empty-label/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -7850,7 +7850,7 @@
             "value": "untitled"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/09-empty-label/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/09-empty-label/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -7948,11 +7948,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-1faccbe3b83b4fad8820fbdd30af2131",
+              "obscuretone-67a3bdf847bf4a2eba50ffba73cbe730",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -7964,7 +7964,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-8pohn_ji,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-4w3i9gak,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8023,11 +8023,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-7a98f5cc9fbc4c388853583899c971fc",
+              "obscuretone-dd88fb98a0d54cf7bb82760a726a4d99",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8039,7 +8039,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-8pohn_ji,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-4w3i9gak,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8123,7 +8123,7 @@
             "value": "\u97f3"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/10-empty-unicode/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/10-empty-unicode/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -8142,7 +8142,7 @@
             "value": "\u97f3"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/10-empty-unicode/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/10-empty-unicode/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -8240,11 +8240,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-63706358a3c84557a6721198d1e65de3",
+              "obscuretone-de95927e39cb43c0818e7a8b464f55bd",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8256,7 +8256,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-69yxha_c,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3qo9w06k,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8315,11 +8315,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-a5fea39c4b1d49a6b9695cd3ec0392fd",
+              "obscuretone-19b27ab98b354b3194d413d6225d370e",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8331,7 +8331,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-69yxha_c,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3qo9w06k,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8415,7 +8415,7 @@
             "value": "line\n\"quoted\""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/11-empty-escaped/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/11-empty-escaped/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -8434,7 +8434,7 @@
             "value": "line\n\"quoted\""
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/11-empty-escaped/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/11-empty-escaped/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -8532,11 +8532,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-d1b8f6b20d014b8e90ef25e566170dc1",
+              "obscuretone-35e23acdafe046518db534022b7104f1",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8548,7 +8548,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-aealy4an,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-y6teobk6,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8607,11 +8607,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-b6b4bd9bdff54390914b8034b06a7a8d",
+              "obscuretone-92708f862cc74b9b9ee7cd1da8becce2",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8623,7 +8623,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-aealy4an,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-y6teobk6,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8707,7 +8707,7 @@
             "value": "3000.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/12-zero-timeout/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/12-zero-timeout/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -8726,7 +8726,7 @@
             "value": "3000.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/12-zero-timeout/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/12-zero-timeout/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -8840,11 +8840,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-7aec78d5b566400cb2be4c733be20dc3",
+              "obscuretone-d300a8a5fd2c4538974ad0a7917b40a1",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8856,7 +8856,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-zdevgypm,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-fbj615gy,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -8923,11 +8923,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f241734ae69d4581a9a84bfd7c85c08f",
+              "obscuretone-4ccaac7035d046e8bcab4c175201ef96",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -8939,7 +8939,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-zdevgypm,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-fbj615gy,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9015,7 +9015,7 @@
     },
     {
       "pair_id": "13-zero-offset",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "53fce0ba1909e21c74e012cd100e399e1dd5106fea8e6f4d8325eb65eec970e5",
         "rust": "c9ce2bde6a5be03d0b75e62e043f900ee974ed8bcbd55f811ec96e3151065396"
@@ -9053,7 +9053,7 @@
             "value": "-0.5"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/13-zero-offset/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/13-zero-offset/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -9072,7 +9072,7 @@
             "value": "-0.5"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/13-zero-offset/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/13-zero-offset/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -9186,11 +9186,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-8f6c692a6d3b4e7d922dbfaa52a602a3",
+              "obscuretone-aaac8f285de640768ef26d9cdbc091e8",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9202,7 +9202,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-as5ox2oe,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3w3yzjc9,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9220,15 +9220,60 @@
         },
         {
           "language": "rust",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "number",
+              "value": "0.0"
+            },
+            {
+              "kind": "number",
+              "value": "-0"
+            },
+            {
+              "kind": "number",
+              "value": "NaN"
+            },
+            {
+              "kind": "number",
+              "value": "1.0"
+            },
+            {
+              "kind": "number",
+              "value": "-1.0"
+            },
+            {
+              "kind": "number",
+              "value": "0.5"
+            },
+            {
+              "kind": "number",
+              "value": "Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "-Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "-0.5"
+            },
+            {
+              "kind": "number",
+              "value": "-0.5"
+            },
+            {
+              "kind": "number",
+              "value": "-0.5"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-19d3805ce8294c52a76993a8b453a79f",
+              "obscuretone-c3c0c8b104e94029ac18994cd7dfb10a",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9240,7 +9285,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-as5ox2oe,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-3w3yzjc9,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9254,24 +9299,69 @@
               "/tmp/target"
             ]
           ],
-          "stdout": "",
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"-0\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"NaN\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"-0.5\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"-0.5\"}}\n{\"id\":10,\"output\":{\"kind\":\"number\",\"value\":\"-0.5\"}}\n",
           "stderr": "warning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_string` is never used\n  --> main.rs:28:4\n   |\n28 | fn encode_string(v: &str) -> String {\n   |    ^^^^^^^^^^^^^\n\n",
-          "error": "Process timed out after 30s",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 0,
+          "input": {
+            "kind": "number",
+            "value": "0.0"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "-0.5"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "0.0"
+          }
+        },
+        {
+          "candidate_index": 1,
+          "input": {
+            "kind": "number",
+            "value": "-0"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "-0.5"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "-0"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "input": {
+            "kind": "number",
+            "value": "NaN"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "-0.5"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "NaN"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
     },
     {
       "pair_id": "14-nan-zero-default",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "94bc8dfc05f5e2dfad6f7277968244e66f5e0a1208eb66e2ce5d74cbc68ed299",
         "rust": "f0090523ce49ec918d072a52a28847bd9dc2efbd95dffead0f229374c27dbbb7"
@@ -9309,7 +9399,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/14-nan-zero-default/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/14-nan-zero-default/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -9328,7 +9418,7 @@
             "value": "0.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/14-nan-zero-default/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/14-nan-zero-default/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -9434,11 +9524,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-4c4b35a5e1394e50b738a7dc56c49a65",
+              "obscuretone-d8ca553f65cd4afab85cdc60cac99313",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9450,7 +9540,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-29gjf95_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-d0psytu_,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9468,15 +9558,56 @@
         },
         {
           "language": "rust",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "number",
+              "value": "0.0"
+            },
+            {
+              "kind": "number",
+              "value": "-0"
+            },
+            {
+              "kind": "number",
+              "value": "NaN"
+            },
+            {
+              "kind": "number",
+              "value": "1.0"
+            },
+            {
+              "kind": "number",
+              "value": "-1.0"
+            },
+            {
+              "kind": "number",
+              "value": "0.5"
+            },
+            {
+              "kind": "number",
+              "value": "Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "-Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "0.0"
+            },
+            {
+              "kind": "number",
+              "value": "0.0"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-25c36f6fc7314f5ea37b5bb3561e8cde",
+              "obscuretone-4541e9b60bbf4c3586c34d92cc162a7a",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9488,7 +9619,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-29gjf95_,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-d0psytu_,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9502,24 +9633,54 @@
               "/tmp/target"
             ]
           ],
-          "stdout": "",
-          "stderr": "",
-          "error": "[Errno 1] Operation not permitted",
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"-0\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"NaN\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n",
+          "stderr": "warning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_string` is never used\n  --> main.rs:28:4\n   |\n28 | fn encode_string(v: &str) -> String {\n   |    ^^^^^^^^^^^^^\n\n",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 1,
+          "input": {
+            "kind": "number",
+            "value": "-0"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "0.0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "-0"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "input": {
+            "kind": "number",
+            "value": "NaN"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "0.0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "NaN"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
     },
     {
       "pair_id": "15-nullish-overfiltered-number",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "cd4ed450145f72a2544a0bdd3b5955b96499cb1389da711039108bb95d78d2ea",
         "rust": "34441f6161ffca2ddce4db61c8abd18c04643007f3068dbdebfeb563b1eafb38"
@@ -9558,7 +9719,7 @@
             "value": "9.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/15-nullish-overfiltered-number/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/15-nullish-overfiltered-number/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -9577,7 +9738,7 @@
             "value": "9.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/15-nullish-overfiltered-number/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/15-nullish-overfiltered-number/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -9642,15 +9803,60 @@
       "executions": [
         {
           "language": "typescript",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "number",
+              "value": "0.0"
+            },
+            {
+              "kind": "number",
+              "value": "-0"
+            },
+            {
+              "kind": "number",
+              "value": "NaN"
+            },
+            {
+              "kind": "number",
+              "value": "1.0"
+            },
+            {
+              "kind": "number",
+              "value": "-1.0"
+            },
+            {
+              "kind": "number",
+              "value": "0.5"
+            },
+            {
+              "kind": "number",
+              "value": "Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "-Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "9.0"
+            },
+            {
+              "kind": "number",
+              "value": "9.0"
+            },
+            {
+              "kind": "number",
+              "value": "9.0"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-8c38ce65304f4a0eb8e13563d51fa9bb",
+              "obscuretone-5f6ad11daae54d97a6b5c4bea65da443",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9662,7 +9868,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-_y9pimlh,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-ll07839r,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9672,9 +9878,9 @@
               "harness.mjs"
             ]
           ],
-          "stdout": "",
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"-0\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"NaN\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"9\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"9\"}}\n{\"id\":10,\"output\":{\"kind\":\"number\",\"value\":\"9\"}}\n",
           "stderr": "",
-          "error": "Process timed out after 30s",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         },
@@ -9729,11 +9935,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-d35db94b586d4c89879bf6c1e791b68c",
+              "obscuretone-4bc867dfa6cf4da8966ef5812f5dbe86",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9745,7 +9951,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-_y9pimlh,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-ll07839r,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9766,10 +9972,55 @@
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 0,
+          "input": {
+            "kind": "number",
+            "value": "0.0"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "0.0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "9.0"
+          }
+        },
+        {
+          "candidate_index": 1,
+          "input": {
+            "kind": "number",
+            "value": "-0"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "-0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "9.0"
+          }
+        },
+        {
+          "candidate_index": 2,
+          "input": {
+            "kind": "number",
+            "value": "NaN"
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "NaN"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "9.0"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
@@ -9815,7 +10066,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/16-nullish-overfiltered-bool/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/16-nullish-overfiltered-bool/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -9834,7 +10085,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/16-nullish-overfiltered-bool/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/16-nullish-overfiltered-bool/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -9892,11 +10143,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-f09dd07a350242b48452230c9e984f6f",
+              "obscuretone-8b35b7ca683d46609c0f65d524ca9cf3",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9908,7 +10159,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5odxnbwj,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-gw0lyg_w,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -9947,11 +10198,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-5959ee3a6a0b49ce92b701207112d562",
+              "obscuretone-1b87e6fdda50447385d9e71463495f80",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -9963,7 +10214,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5odxnbwj,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-gw0lyg_w,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10009,7 +10260,7 @@
     },
     {
       "pair_id": "17-nullish-overfiltered-string",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "eec79b05d174f3a423d1d97832aa1f0223c204e554cbdd37931c8da2ba186cf7",
         "rust": "14f194d5c178ec3aaceeb6966e522fe780a0fefd73d2664deb243fbddd871e09"
@@ -10048,7 +10299,7 @@
             "value": "default"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/17-nullish-overfiltered-string/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/17-nullish-overfiltered-string/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -10067,7 +10318,7 @@
             "value": "default"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/17-nullish-overfiltered-string/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/17-nullish-overfiltered-string/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -10165,11 +10416,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-b55012b8ecae48ca82d4c0ae69748a08",
+              "obscuretone-ba822f3737434b5abc83116791f60636",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10181,7 +10432,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-wsv8zuzn,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-tm7qb0ta,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10199,15 +10450,52 @@
         },
         {
           "language": "rust",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": "default"
+            },
+            {
+              "kind": "string",
+              "value": "hello"
+            },
+            {
+              "kind": "string",
+              "value": "0"
+            },
+            {
+              "kind": "string",
+              "value": "false"
+            },
+            {
+              "kind": "string",
+              "value": " "
+            },
+            {
+              "kind": "string",
+              "value": "\u00e9\n\"\\"
+            },
+            {
+              "kind": "string",
+              "value": "default"
+            },
+            {
+              "kind": "string",
+              "value": "default"
+            },
+            {
+              "kind": "string",
+              "value": "default"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-6c4908912b41427aa8f8f8b6c13394fa",
+              "obscuretone-3ee1f44c1c154a4d93a8e0f83b5f39ae",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10219,7 +10507,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-wsv8zuzn,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-tm7qb0ta,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10233,24 +10521,39 @@
               "/tmp/target"
             ]
           ],
-          "stdout": "",
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"default\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"hello\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"0\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"false\"}}\n{\"id\":4,\"output\":{\"kind\":\"string\",\"value\":\" \"}}\n{\"id\":5,\"output\":{\"kind\":\"string\",\"value\":\"\u00e9\\n\\\"\\\\\"}}\n{\"id\":6,\"output\":{\"kind\":\"string\",\"value\":\"default\"}}\n{\"id\":7,\"output\":{\"kind\":\"string\",\"value\":\"default\"}}\n{\"id\":8,\"output\":{\"kind\":\"string\",\"value\":\"default\"}}\n",
           "stderr": "warning: function `encode_number` is never used\n  --> main.rs:17:4\n   |\n17 | fn encode_number(v: f64) -> String {\n   |    ^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n\n",
-          "error": "Process timed out after 30s",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 0,
+          "input": {
+            "kind": "string",
+            "value": ""
+          },
+          "typescript": {
+            "kind": "string",
+            "value": ""
+          },
+          "rust": {
+            "kind": "string",
+            "value": "default"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
     },
     {
       "pair_id": "18-changed-missing-number",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "7e55dd54220847fb65eba7454edfffe5f90268718c531b05d49a834471a195d9",
         "rust": "3b26f13d54e6554035fe8fec732a0cafdfa9858f6d785b0500aa846912f8a977"
@@ -10288,7 +10591,7 @@
             "value": "1.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/18-changed-missing-number/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/18-changed-missing-number/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -10307,7 +10610,7 @@
             "value": "2.0"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/18-changed-missing-number/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/18-changed-missing-number/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -10421,11 +10724,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-a680108121a14533b3cf8b7fecfe1129",
+              "obscuretone-d3aa7be02bd044a586304514295ca59c",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10437,7 +10740,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5x0z9sx6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-w1npuv_q,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10455,15 +10758,60 @@
         },
         {
           "language": "rust",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "number",
+              "value": "0.0"
+            },
+            {
+              "kind": "number",
+              "value": "-0"
+            },
+            {
+              "kind": "number",
+              "value": "NaN"
+            },
+            {
+              "kind": "number",
+              "value": "1.0"
+            },
+            {
+              "kind": "number",
+              "value": "-1.0"
+            },
+            {
+              "kind": "number",
+              "value": "0.5"
+            },
+            {
+              "kind": "number",
+              "value": "Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "-Infinity"
+            },
+            {
+              "kind": "number",
+              "value": "2.0"
+            },
+            {
+              "kind": "number",
+              "value": "2.0"
+            },
+            {
+              "kind": "number",
+              "value": "2.0"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-a78e3bebcc6d487e818f237c371a7822",
+              "obscuretone-8a1ba96918f84a2a8bf5c6788fa1a588",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10475,7 +10823,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-5x0z9sx6,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-w1npuv_q,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10489,17 +10837,47 @@
               "/tmp/target"
             ]
           ],
-          "stdout": "",
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"number\",\"value\":\"0\"}}\n{\"id\":1,\"output\":{\"kind\":\"number\",\"value\":\"-0\"}}\n{\"id\":2,\"output\":{\"kind\":\"number\",\"value\":\"NaN\"}}\n{\"id\":3,\"output\":{\"kind\":\"number\",\"value\":\"1\"}}\n{\"id\":4,\"output\":{\"kind\":\"number\",\"value\":\"-1\"}}\n{\"id\":5,\"output\":{\"kind\":\"number\",\"value\":\"0.5\"}}\n{\"id\":6,\"output\":{\"kind\":\"number\",\"value\":\"Infinity\"}}\n{\"id\":7,\"output\":{\"kind\":\"number\",\"value\":\"-Infinity\"}}\n{\"id\":8,\"output\":{\"kind\":\"number\",\"value\":\"2\"}}\n{\"id\":9,\"output\":{\"kind\":\"number\",\"value\":\"2\"}}\n{\"id\":10,\"output\":{\"kind\":\"number\",\"value\":\"2\"}}\n",
           "stderr": "warning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_string` is never used\n  --> main.rs:28:4\n   |\n28 | fn encode_string(v: &str) -> String {\n   |    ^^^^^^^^^^^^^\n\n",
-          "error": "Process timed out after 30s",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 8,
+          "input": {
+            "kind": "null",
+            "value": null
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "1.0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "2.0"
+          }
+        },
+        {
+          "candidate_index": 9,
+          "input": {
+            "kind": "undefined",
+            "value": null
+          },
+          "typescript": {
+            "kind": "number",
+            "value": "1.0"
+          },
+          "rust": {
+            "kind": "number",
+            "value": "2.0"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
@@ -10544,7 +10922,7 @@
             "value": false
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/19-changed-missing-bool/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/19-changed-missing-bool/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -10563,7 +10941,7 @@
             "value": true
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/19-changed-missing-bool/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/19-changed-missing-bool/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -10621,11 +10999,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-4d552fb7ae8e45a6bebfbc7660106e48",
+              "obscuretone-80035188831443e1971048a8797f4efe",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10637,7 +11015,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-1lizkz5w,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-018naw2t,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10676,11 +11054,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-d30ae8a980404ae889977a6668c3e618",
+              "obscuretone-0b3705a10b46466fb485ec34e0975d0f",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10692,7 +11070,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-1lizkz5w,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-018naw2t,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10753,7 +11131,7 @@
     },
     {
       "pair_id": "20-changed-missing-string",
-      "status": "inconclusive",
+      "status": "confirmed_difference",
       "sources": {
         "typescript": "ef68d7a472fcd793359c5975bc7e67914019fd01bb7a197758b5f2c9e0a91bad",
         "rust": "770ea4cd35c612965274d1b08543fbcb93fcc5006b34d1506874e212f1c88e39"
@@ -10791,7 +11169,7 @@
             "value": "old"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/20-changed-missing-string/source.ts",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/20-changed-missing-string/source.ts",
             "start_line": 2,
             "start_column": 12,
             "end_line": 2,
@@ -10810,7 +11188,7 @@
             "value": "new"
           },
           "span": {
-            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/regressions/20-changed-missing-string/source.rs",
+            "path": "/home/runner/work/obscuretone-semantic-diff/obscuretone-semantic-diff/fixtures/regressions/20-changed-missing-string/source.rs",
             "start_line": 2,
             "start_column": 5,
             "end_line": 2,
@@ -10916,11 +11294,11 @@
           ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-eb9aec78ca814dba8558872770bc10c4",
+              "obscuretone-246438e5db854742aea4402639b54266",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10932,7 +11310,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ro8llo__,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-egvspuo5,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10950,15 +11328,56 @@
         },
         {
           "language": "rust",
-          "status": "error",
-          "observations": [],
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": ""
+            },
+            {
+              "kind": "string",
+              "value": "hello"
+            },
+            {
+              "kind": "string",
+              "value": "0"
+            },
+            {
+              "kind": "string",
+              "value": "false"
+            },
+            {
+              "kind": "string",
+              "value": " "
+            },
+            {
+              "kind": "string",
+              "value": "\u00e9\n\"\\"
+            },
+            {
+              "kind": "string",
+              "value": "new"
+            },
+            {
+              "kind": "string",
+              "value": "new"
+            },
+            {
+              "kind": "string",
+              "value": "old"
+            },
+            {
+              "kind": "string",
+              "value": "new"
+            }
+          ],
           "commands": [
             [
-              "/usr/local/bin/docker",
+              "/usr/bin/docker",
               "run",
               "--rm",
               "--name",
-              "obscuretone-d1848b6b01cc437f8f98574913f93309",
+              "obscuretone-39519f1c8f98482ab872cd5ad232eac6",
               "--pull=never",
               "--network=none",
               "--read-only",
@@ -10970,7 +11389,7 @@
               "--cpus=1",
               "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
               "--mount",
-              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/obscuretone-ro8llo__,dst=/job,readonly",
+              "type=bind,src=/tmp/obscuretone-egvspuo5,dst=/job,readonly",
               "--workdir=/job",
               "--env=HOME=/tmp",
               "--env=CARGO_HOME=/tmp/cargo",
@@ -10986,15 +11405,45 @@
           ],
           "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"hello\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"0\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"false\"}}\n{\"id\":4,\"output\":{\"kind\":\"string\",\"value\":\" \"}}\n{\"id\":5,\"output\":{\"kind\":\"string\",\"value\":\"\u00e9\\n\\\"\\\\\"}}\n{\"id\":6,\"output\":{\"kind\":\"string\",\"value\":\"new\"}}\n{\"id\":7,\"output\":{\"kind\":\"string\",\"value\":\"new\"}}\n{\"id\":8,\"output\":{\"kind\":\"string\",\"value\":\"old\"}}\n{\"id\":9,\"output\":{\"kind\":\"string\",\"value\":\"new\"}}\n",
           "stderr": "warning: function `encode_number` is never used\n  --> main.rs:17:4\n   |\n17 | fn encode_number(v: f64) -> String {\n   |    ^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n\n",
-          "error": "Process timed out after 30s",
+          "error": null,
           "backend": "docker",
           "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
         }
       ],
-      "differences": [],
+      "differences": [
+        {
+          "candidate_index": 6,
+          "input": {
+            "kind": "null",
+            "value": null
+          },
+          "typescript": {
+            "kind": "string",
+            "value": "old"
+          },
+          "rust": {
+            "kind": "string",
+            "value": "new"
+          }
+        },
+        {
+          "candidate_index": 7,
+          "input": {
+            "kind": "undefined",
+            "value": null
+          },
+          "typescript": {
+            "kind": "string",
+            "value": "old"
+          },
+          "rust": {
+            "kind": "string",
+            "value": "new"
+          }
+        }
+      ],
       "limitations": [
-        "Bounded candidates under declared assumptions; no full semantic equivalence.",
-        "Both runners must succeed with a complete observation protocol"
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
       ],
       "schema_version": "1.0",
       "equivalence_claim": false
@@ -11164,17 +11613,17 @@
     {
       "pair_id": "13-zero-offset",
       "expected": "regression",
-      "passed": false
+      "passed": true
     },
     {
       "pair_id": "14-nan-zero-default",
       "expected": "regression",
-      "passed": false
+      "passed": true
     },
     {
       "pair_id": "15-nullish-overfiltered-number",
       "expected": "regression",
-      "passed": false
+      "passed": true
     },
     {
       "pair_id": "16-nullish-overfiltered-bool",
@@ -11184,12 +11633,12 @@
     {
       "pair_id": "17-nullish-overfiltered-string",
       "expected": "regression",
-      "passed": false
+      "passed": true
     },
     {
       "pair_id": "18-changed-missing-number",
       "expected": "regression",
-      "passed": false
+      "passed": true
     },
     {
       "pair_id": "19-changed-missing-bool",
@@ -11199,16 +11648,15 @@
     {
       "pair_id": "20-changed-missing-string",
       "expected": "regression",
-      "passed": false
+      "passed": true
     }
   ],
   "summary": {
     "no_difference_observed": 20,
-    "confirmed_difference": 14,
-    "inconclusive": 6,
+    "confirmed_difference": 20,
     "total": 40,
-    "expected_passed": 34,
-    "expected_failed": 6
+    "expected_passed": 40,
+    "expected_failed": 0
   },
   "equivalence_claim": false
 }

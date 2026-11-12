@@ -1,0 +1,29 @@
+{
+  "workflow_run": "https://github.com/Obscuretone/obscuretone-semantic-diff/actions/runs/43328393792",
+  "tested_commit": "99ca92d1c11cd336bc224e99c82ad67962db9025",
+  "artifacts": [
+    {
+      "id": 13994635216,
+      "name": "evidence-py3.11-local",
+      "archive_sha256": "05d464e1fb476e056261e46e9eee022a25b71624db64f8ad03cb2020b58795c9"
+    },
+    {
+      "id": 13993149084,
+      "name": "evidence-py3.13-docker",
+      "archive_sha256": "56bc35f6e02031dcb9d8408fa4c6533fc879fd6e30b685b5c0a2e47000f3213f"
+    }
+  ],
+  "files": {
+    "ci/43328393792/evidence-py3.11-local/corpus-console.txt": "601b5dfce2fdafda1c5b4ff269e37b020c577640c76ef95534dbc127d40efb0d",
+    "ci/43328393792/evidence-py3.11-local/corpus.json": "0dd1dd97896174595063a301ebdd08058d29213ab780db0ea2879b93cdeff891",
+    "ci/43328393792/evidence-py3.11-local/coverage.json": "2fdffc295e28a1f691deb7d65614eaf0a55353f1424ebd0baef7fc55d1078124",
+    "ci/43328393792/evidence-py3.11-local/environment.json": "35d86524d385444707f2c6607c969b55bcd472e6ca5b05d8161dade12d3a144b",
+    "ci/43328393792/evidence-py3.11-local/pytest.xml": "aabd9166ce231e1966141e4492ac66184014140e5f4e45b3af8182c5ba9dca6c",
+    "ci/43328393792/evidence-py3.13-docker/corpus-console.txt": "601b5dfce2fdafda1c5b4ff269e37b020c577640c76ef95534dbc127d40efb0d",
+    "ci/43328393792/evidence-py3.13-docker/corpus.json": "c25858db04ee661951a3d9878619265e2bd822a59f00c06c85518f27109cf07e",
+    "ci/43328393792/evidence-py3.13-docker/coverage.json": "907a9c69f01a116fc8e7e0594a3fcb9da5f0061b5c722c9631ba93bb596dd85b",
+    "ci/43328393792/evidence-py3.13-docker/environment.json": "cf71f8c7acdadd76604657611d8987cf9f0e1ace860844cb37586c9ddd741b23",
+    "ci/43328393792/evidence-py3.13-docker/pytest.xml": "55ac65300b43831ca7f8cdc874bbe1c1ac9655cc82facd5e22bd1ba21787ae27"
+  },
+  "note": "Top-level corpus, coverage and JUnit are copies of hosted Python 3.13 Docker evidence. Source code is unchanged from the tested commit. Local host attempts are stored separately."
+}

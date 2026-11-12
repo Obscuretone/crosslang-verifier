@@ -1,0 +1,124 @@
+........................................................................ [ 40%]
+..........................FFF
+=================================== FAILURES ===================================
+________________ test_actual_corpus[controls/03-nullish-string] ________________
+
+integration_context = Context(adapters={'typescript': <obscuretone_semantic_diff.adapters.TreeSitterAdapter object at 0x1078cd790>, 'rust': ...s.RuleRegistry object at 0x1078e3a70>, runner=<obscuretone_semantic_diff.runners.IsolatedRunner object at 0x10781a4a0>)
+path = PosixPath('/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/03-nullish-string/manifest.json')
+
+    @pytest.mark.parametrize("path", MANIFESTS, ids=lambda p: f"{p.parent.parent.name}/{p.parent.name}")
+    def test_actual_corpus(integration_context, path):
+        pair = load_pair(path)
+>       report = analyze(integration_context, pair, execute=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integration.py:19:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/obscuretone_semantic_diff/engine.py:44: in analyze
+    report.executions = runner.execute(pair, resolution, report.candidates)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/obscuretone_semantic_diff/runners.py:227: in execute
+    ???
+src/obscuretone_semantic_diff/runners.py:325: in _run
+    return result
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:556: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:1219: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:2123: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: -9 args: ['docker', 'rm', '--force', 'obscuretone-9d3f77...>
+endtime = 261110.489311833, orig_timeout = 10, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['docker', 'rm', '--force', 'obscuretone-9d3f771bb6ee468d9ce466f54d7f82bb']' timed out after 10 seconds
+
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:1263: TimeoutExpired
+________________ test_actual_corpus[controls/04-filter-number] _________________
+
+integration_context = Context(adapters={'typescript': <obscuretone_semantic_diff.adapters.TreeSitterAdapter object at 0x1078cd790>, 'rust': ...s.RuleRegistry object at 0x1078e3a70>, runner=<obscuretone_semantic_diff.runners.IsolatedRunner object at 0x10781a4a0>)
+path = PosixPath('/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/04-filter-number/manifest.json')
+
+    @pytest.mark.parametrize("path", MANIFESTS, ids=lambda p: f"{p.parent.parent.name}/{p.parent.name}")
+    def test_actual_corpus(integration_context, path):
+        pair = load_pair(path)
+>       report = analyze(integration_context, pair, execute=True)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/test_integration.py:19:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/obscuretone_semantic_diff/engine.py:44: in analyze
+    report.executions = runner.execute(pair, resolution, report.candidates)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/obscuretone_semantic_diff/runners.py:227: in execute
+    ):
+
+src/obscuretone_semantic_diff/runners.py:325: in _run
+    )
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:556: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:1219: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:2123: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <Popen: returncode: -9 args: ['docker', 'rm', '--force', 'obscuretone-d5331a...>
+endtime = 261165.469330583, orig_timeout = 10, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['docker', 'rm', '--force', 'obscuretone-d5331a79a68f445783c8ec8fccbfd7aa']' timed out after 10 seconds
+
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py:1263: TimeoutExpired
+_________________ test_actual_corpus[controls/05-filter-bool] __________________
+
+integration_context = Context(adapters={'typescript': <obscuretone_semantic_diff.adapters.TreeSitterAdapter object at 0x1078cd790>, 'rust': ...s.RuleRegistry object at 0x1078e3a70>, runner=<obscuretone_semantic_diff.runners.IsolatedRunner object at 0x10781a4a0>)
+path = PosixPath('/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/outputs/obscuretone-semantic-diff/fixtures/controls/05-filter-bool/manifest.json')
+
+    @pytest.mark.parametrize("path", MANIFESTS, ids=lambda p: f"{p.parent.parent.name}/{p.parent.name}")
+    def test_actual_corpus(integration_context, path):
+        pair = load_pair(path)
+        report = analyze(integration_context, pair, execute=True)
+        status = "confirmed_difference" if pair.expected == "regression" else "no_difference_observed"
+>       assert report.status == status, report.to_dict()
+E       AssertionError: {'pair_id': '05-filter-bool', 'status': 'inconclusive', 'sources': {'typescript': '72a187b98ed7ec1c0ce749f941554a5a39c...d5989e02816cf6854d7afc92'}, 'manifest_sha256': '8434d0c437367275d6de7d46a735bb3007995945cee3bb8f11d9b6c06f62e803', ...}
+E       assert 'inconclusive' == 'no_difference_observed'
+E
+E         - no_difference_observed
+E         + inconclusive
+
+tests/test_integration.py:21: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_integration.py::test_actual_corpus[controls/03-nullish-string]
+FAILED tests/test_integration.py::test_actual_corpus[controls/04-filter-number]
+FAILED tests/test_integration.py::test_actual_corpus[controls/05-filter-bool]
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! KeyboardInterrupt !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/selectors.py:548: KeyboardInterrupt
+(to show a full traceback on KeyboardInterrupt use --full-trace)
+3 failed, 98 passed in 264.55s (0:04:24)
