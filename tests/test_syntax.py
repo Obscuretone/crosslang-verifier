@@ -2,8 +2,12 @@ import json
 
 import pytest
 
-from crosslang_verifier.cli import main
+from crosslang_verifier.cli import main as cli_main
 from crosslang_verifier.syntax import build_syntax_context, compare_files, parse_file
+
+
+def main(arguments):
+    return cli_main(["--raw", *arguments])
 
 
 def nodes(tree):

@@ -12,6 +12,7 @@ from . import __version__
 from .context import build_context
 from .engine import analyze
 from .models import InputError, load_pair
+from .parity import main as parity_main
 from .reporting import ConsoleReporter, JsonReporter
 from .runners import IsolatedRunner
 from .syntax import main as syntax_main
@@ -117,4 +118,6 @@ def main(argv: list[str] | None = None) -> int:
     arguments = sys.argv[1:] if argv is None else argv
     if arguments and arguments[0] in {"compare", "suite"}:
         return behavioral_main(arguments)
-    return syntax_main(arguments)
+    if "--raw" in arguments:
+        return syntax_main([arg for arg in arguments if arg != "--raw"])
+    return parity_main(arguments)

@@ -37,15 +37,29 @@ jobs:
         run: |
           docker pull node:22-bookworm-slim
           docker pull rust:1-slim-bookworm
-      - name: Dump two files without a manifest
+      - name: Dump raw syntax trees without a manifest
         run: |
           mkdir -p ci-evidence
           ast_exit=0
-          crosslang-verifier examples/linkedin-error-fallback/original.ts \
+          crosslang-verifier --raw examples/linkedin-error-fallback/original.ts \
             examples/linkedin-error-fallback/migrated.rs \
             --output-dir ci-evidence/asts --json-output ci-evidence/ast-comparison.json \
             > ci-evidence/ast-console.txt || ast_exit=$?
           test "$ast_exit" -eq 1
+      - name: Check shared AST parity, difference and unresolved results
+        run: |
+          for variant in equivalent different unresolved; do
+            parity_exit=0
+            crosslang-verifier examples/parity/equivalent.ts examples/parity/$variant.rs \
+              --output-dir ci-evidence/parity/$variant \
+              --json-output ci-evidence/parity/$variant.json \
+              > ci-evidence/parity-$variant.txt || parity_exit=$?
+            case "$variant" in
+              equivalent) test "$parity_exit" -eq 0 ;;
+              different) test "$parity_exit" -eq 1 ;;
+              unresolved) test "$parity_exit" -eq 2 ;;
+            esac
+          done
       - name: Lint and package
         run: |
           ruff check .

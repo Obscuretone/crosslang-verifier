@@ -1,5 +1,7 @@
 # JSON contract, version 1.0
 
+This document describes the advanced `compare` / `suite` reports. The default two-file command uses `mode: cross_language_ast_parity`; its shared/raw trees, statuses and assumption contract are described in [PARITY.md](PARITY.md). `--raw` uses the independent `mode: ast` syntax report.
+
 `compare --format json` returns a pair report. `suite --format json` returns an envelope with `schema_version`, `tool_version`, `generated_at`, `reports`, `expectations`, `summary`, and `equivalence_claim: false`. Input failures return `schema_version` and `error`, with exit code 2.
 
 A pair report includes:
