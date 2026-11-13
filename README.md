@@ -1,16 +1,10 @@
 # crosslang-verifier
 
-Dump and compare the syntax trees of two files.
+**Working today:** give it two files; it dumps both syntax trees and their diff. Tests and CI pass.
 
-[![CI](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml/badge.svg)](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml)
+**Not implemented:** general cross-language AST parity. The basic command does not decide whether a TypeScript-to-Rust rewrite is correct.
 
-```sh
-crosslang-verifier original.ts rewritten.rs
-```
-
-That's the basic workflow. It prints both Tree-sitter trees and a unified syntax diff.
-
-## Install
+## Use it
 
 Python 3.11+:
 
@@ -18,41 +12,28 @@ Python 3.11+:
 git clone https://github.com/Obscuretone/crosslang-verifier.git
 cd crosslang-verifier
 pip install -e .
+crosslang-verifier before.ts after.rs --output-dir asts
 ```
 
-The two-file command uses the Tree-sitter Python dependencies. It needs no manifest, type assumptions, Node, Cargo, Docker or running server. It parses the supplied files without executing them. Supported extensions: `.ts`, `.tsx`, `.rs`; either file can be any supported type.
+You get `left.ast.json`, `right.ast.json` and `diff.txt`. It also prints the trees and diff. Supports `.ts`, `.tsx` and `.rs`. No manifest, Node, Cargo or Docker needed for this command; it never executes the input files.
 
-## Save the ASTs
+Exit codes: `0` = same syntax tree, `1` = different trees, `2` = input/parse error. A syntax difference is not a confirmed behavioral bug.
 
-```sh
-crosslang-verifier original.ts rewritten.rs --output-dir asts
+## How hard is AST parity?
+
+Dumping trees is straightforward. Cross-language parity is the harder part: equivalent TypeScript and Rust produce different parser trees. Both must be mapped into a shared representation before their operations can be compared meaningfully.
+
+For example:
+
+```text
+TypeScript: x || fallback          -> fallback when x is falsy
+Rust:       x.unwrap_or(fallback)  -> fallback when x is None
 ```
 
-This writes `asts/left.ast.json`, `asts/right.ast.json` and `asts/diff.txt`. Each tree includes node types, child fields, token/literal text, source positions and a source hash. Operators and punctuation are retained, so differences such as `||` versus `??` do not disappear.
+Those conditions differ for a present empty string. The repository's optional fallback checker handles this narrow case and can execute a counterexample under explicit assumptions. It is not a general cross-language parity checker.
 
-For both trees and their comparison in one JSON document:
+A few well-defined mappings are manageable. General rewrites require handling types, control flow and language-specific behavior; matching AST shapes alone still would not prove matching behavior.
 
-```sh
-crosslang-verifier original.ts rewritten.rs --format json > comparison.json
-```
+[Tests and CI](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml) · [Optional behavioral checks](docs/ADVANCED.md) · [Preserved evidence](evidence/README.md)
 
-Exit codes: `0` for matching syntax trees, `1` for different trees, `2` for input/parse errors. The diff ignores positions and whitespace between tokens. It preserves names, literals, operators and comments. Positions use one-based lines and UTF-8 byte columns, with exclusive end positions.
-
-These are language-specific Tree-sitter syntax trees. Different languages normally produce different trees; inspect the emitted structures and diff to compare them. Matching trees do not prove behavioral equivalence.
-
-## Optional deeper checks
-
-The original manifest-based `compare` and `suite` commands remain available for executing bounded TypeScript/Rust fallback checks. See [advanced usage](docs/ADVANCED.md). Historical [evidence](evidence/README.md), the [checked LinkedIn reproduction](examples/linkedin-error-fallback/), and the original 40-fixture corpus are preserved.
-
-## Development
-
-```sh
-pip install -e '.[dev]' -c requirements-dev.lock
-pytest -q
-ruff check .
-ruff format --check .
-```
-
-Tree parsing and two-file CLI tests run locally without a container VM. GitHub Actions also runs the optional execution suite and retains its reports. See [architecture](docs/ARCHITECTURE.md) and [contributing](CONTRIBUTING.md).
-
-MIT licensed. Created and maintained by **ObscureTone**.
+MIT licensed. By **ObscureTone**.
