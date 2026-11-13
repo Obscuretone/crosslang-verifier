@@ -1,0 +1,122 @@
+{
+  "run_id": 43439254233,
+  "url": "https://github.com/Obscuretone/crosslang-verifier/actions/runs/43439254233",
+  "source_revision": "620a98869b9bbe273324de7f8e77f05dcc7d3dc6",
+  "conclusion": "success",
+  "event": "push",
+  "artifacts": [
+    {
+      "name": "evidence-py3.11-local",
+      "artifact_id": 14044742089,
+      "files": {
+        "functional-verification.json": "d7a81c7641135eef7459416e7f25e44bf499767115e96077b45d68e061b0928b",
+        "functional-verification-console.txt": "1782833a849bd5e89ea1110de8971ac0918e624e054627222001ad016960bbc9",
+        "pytest.xml": "91a74dcedfd185e8342939773102dde0845dfcd34aabca00bb31f306e07665dc",
+        "coverage.json": "9f4c9cd28ea4edbbd7176a65c2a43ad6c2c3332522b3942e79d2b031e40a02b2",
+        "environment.json": "fc18a10841992a25c50976260cccf7663a689f13ce25b64e5a22184ecc0a6a02",
+        "package-metadata.txt": "34b2322750b99bff32ce08eddd8d9a0e7ead8b34ba7da9c7f96d21a1ee09257d",
+        "corpus.json": "2d1d456d3cedadee13bab5ff768237d45ca9f72a3a201a7cba8d58ab369e4760",
+        "corpus-console.txt": "7f6bbed2c344ca68c08b89efb2325952934a452407d756761bb273b02de1748a",
+        "linkedin-example.json": "d756fbc07a71be750172bc61be0a89acdd8e6a4d3550a6c0d4b9b42cd6e83511"
+      },
+      "audit": {
+        "checks": {
+          "matched_source_hashes": 44,
+          "replayed_solver_queries": 20,
+          "matched_native_differences": 27
+        },
+        "pytest": {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "316",
+          "time": "21.689",
+          "timestamp": "2026-11-13T14:04:51.431902+00:00",
+          "hostname": "runnervmccnms"
+        },
+        "coverage_percent": 93.57454772301934,
+        "functional_summary": {
+          "total": 22,
+          "passed": 22,
+          "statuses": {
+            "verified_finite_domain": 3,
+            "confirmed_difference": 8,
+            "verified_model": 6,
+            "tested_agreement": 2,
+            "inconclusive": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "evidence-py3.13-docker",
+      "artifact_id": 14044302629,
+      "files": {
+        "functional-verification.json": "b2a3d571166478e228f1e798423cd38a84ef085494405f31ddb1f31f1d1c0458",
+        "functional-verification-console.txt": "1782833a849bd5e89ea1110de8971ac0918e624e054627222001ad016960bbc9",
+        "pytest.xml": "1137be77f1f7b09c96ba67a960dd88018e3b429e46a260d33d347d7e963c7af4",
+        "coverage.json": "c098fe42a4c98e3f4b46650423e7bfde826537b271f6f134e1a5d86755713b0b",
+        "environment.json": "b89bab38ba6e0639af2afa3088b973742c45bf3bb7d03235528a1ee6dbdd49ce",
+        "package-metadata.txt": "f18fbbaabee16d37edd7db2b81bffa4799fa91cfcd741592b5fdee645fa00cdb",
+        "corpus.json": "6cb218ab1f39a2d5fdcee480e1b06b27e3b8cbcac5b2ad97a43b3dfa442394da",
+        "corpus-console.txt": "7f6bbed2c344ca68c08b89efb2325952934a452407d756761bb273b02de1748a",
+        "linkedin-example.json": "a0e7cba40478fa175cd80a932274ee140b8e076b621b43d51060094f40f7e54b"
+      },
+      "audit": {
+        "checks": {
+          "matched_source_hashes": 44,
+          "replayed_solver_queries": 20,
+          "matched_native_differences": 27
+        },
+        "pytest": {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "316",
+          "time": "48.070",
+          "timestamp": "2026-11-13T14:05:01.992898+00:00",
+          "hostname": "runnervmwuk1x"
+        },
+        "coverage_percent": 93.88646288209607,
+        "functional_summary": {
+          "total": 22,
+          "passed": 22,
+          "statuses": {
+            "verified_finite_domain": 3,
+            "confirmed_difference": 8,
+            "verified_model": 6,
+            "tested_agreement": 2,
+            "inconclusive": 3
+          }
+        }
+      }
+    }
+  ],
+  "note": "Files copied byte-for-byte from hosted CI artifacts. No benchmark or full-equivalence claim.",
+  "historical_preservation": {
+    "baseline_revision": "23f2bfb7492a28410460237d9060102fd4b61b3b",
+    "unchanged_files": 167,
+    "check": "Git blob hashes matched for every original fixtures/ and evidence/ file"
+  },
+  "host": {
+    "pytest": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "66",
+      "tests": "316",
+      "time": "3.389",
+      "timestamp": "2026-11-13T09:08:24.104345-05:00",
+      "hostname": "Evans-MacBook-Air.local"
+    },
+    "passed": 250,
+    "files": {
+      "pytest.txt": "1f56c48527d79f901cb48724f294e42c98a549deb8b13ea8126ca9abbacfb083",
+      "coverage.json": "eec88f50083bffcbd1b9cd791d0fdb3f8d7c2080042886b2682f977963ce64af",
+      "pytest.xml": "7cc738614fff8f20a66567324490c1ba20deb1f2d081058e1f9466f113bb8bf9",
+      "environment.json": "e5d0764c919ca7ada169bcf0b57c33dcf65a35e11cb4566937294f1c428ecf35"
+    }
+  }
+}

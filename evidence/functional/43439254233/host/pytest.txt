@@ -1,0 +1,11 @@
+........................................................................ [ 22%]
+........................ssssssssssssssssssssssssssssssssssssssssssss.... [ 45%]
+s....................................................................... [ 68%]
+........................................................................ [ 91%]
+.....ssssssssssssssssssss..s                                             [100%]
+================================ tests coverage ================================
+_______________ coverage: platform darwin, python 3.13.1-final-0 _______________
+
+Coverage JSON written to file evidence/functional/43439254233/host/coverage.json
+Required test coverage of 85% reached. Total coverage: 91.77%
+250 passed, 66 skipped in 3.53s

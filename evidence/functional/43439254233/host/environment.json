@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-11-13T14:08:23.166729+00:00",
+  "backend": "local",
+  "python": "3.13.1",
+  "platform": "macOS-15.0-arm64-arm-64bit-Mach-O",
+  "packages": {
+    "crosslang-verifier": "0.1.0",
+    "tree-sitter": "0.26.1",
+    "tree-sitter-typescript": "0.23.2",
+    "tree-sitter-rust": "0.24.2",
+    "z3-solver": "5.4.1.0",
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.17.5",
+    "build": "1.6.1"
+  },
+  "tools": [
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "v26.3.0",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cargo",
+        "--version"
+      ],
+      "available": false
+    },
+    {
+      "command": [
+        "rustc",
+        "--version"
+      ],
+      "available": false
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "git version 2.39.5 (Apple Git-154)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "620a98869b9bbe273324de7f8e77f05dcc7d3dc6",
+      "stderr": ""
+    }
+  ],
+  "note": "Actual tool output; no benchmark or equivalence claim."
+}

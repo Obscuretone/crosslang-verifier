@@ -46,7 +46,7 @@ Try the [shipping-cost port](examples/port/):
 crosslang-verifier examples/port/before.ts examples/port/after.rs --verify
 ```
 
-Different ASTs can still compute the same result. Matching ASTs can still fail compilation. [Experiments and exact limits](docs/VERIFICATION.md) explain what each result means.
+Different ASTs can still compute the same result. Matching ASTs can still fail compilation. [Experiments and exact limits](docs/VERIFICATION.md) explain what each result means. [Recorded CI evidence](evidence/functional/43439254233/) includes 316 passing tests per backend and 22 correctly classified experiments.
 
 ## Fallbacks and limits
 
