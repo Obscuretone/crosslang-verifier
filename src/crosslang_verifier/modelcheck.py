@@ -177,7 +177,11 @@ class Query:
         if name in stack or len(stack) >= 16:
             raise OutsideModel("Recursion is outside the solver model")
         function = module[name]
-        if function["returns"] not in {"f64", "bool", "string"}:
+        if not isinstance(function["returns"], str) or function["returns"] not in {
+            "f64",
+            "bool",
+            "string",
+        }:
             raise OutsideModel("Only primitive return values are modeled")
         env = {f"p{i}": arg for i, arg in enumerate(args)}
         active, returns = self.block(

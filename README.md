@@ -40,6 +40,12 @@ Node/Cargo runner images must be installed for the default isolated Docker backe
 - **CONFIRMED_DIFFERENCE** (`1`): actual Node/Rust results differ; the report includes the input.
 - **TESTED_AGREEMENT** or **INCONCLUSIVE** (`2`): samples agreed without a proof, or verification could not finish.
 
+Try the [shipping-cost port](examples/port/):
+
+```sh
+crosslang-verifier examples/port/before.ts examples/port/after.rs --verify
+```
+
 Different ASTs can still compute the same result. Matching ASTs can still fail compilation. [Experiments and exact limits](docs/VERIFICATION.md) explain what each result means.
 
 ## Fallbacks and limits

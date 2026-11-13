@@ -217,3 +217,58 @@ def test_actual_functional_experiments(request, case):
         assert report["ast_status"] == "parity"
         assert report["functions"][0]["executions"][1]["status"] == "error"
         assert "unknown character escape" in report["functions"][0]["executions"][1]["stderr"]
+
+
+def test_multi_function_port_models():
+    root = ROOT / "examples/port"
+    ast = compare_parity(
+        ParityContext(build_syntax_context()), root / "before.ts", root / "after.rs"
+    )
+    assert ast["status"] == "different"
+    for name in ("shipping", "eligible"):
+        model = ModelChecker().check(ast["left"]["shared_ast"], ast["right"]["shared_ast"], name)
+        assert model["status"] == "unsat", model
+
+
+def test_outside_model_and_recursion_are_explicit(tmp_path):
+    ts = tmp_path / "before.ts"
+    rs = tmp_path / "after.rs"
+    ts.write_text("export function check(x:boolean):boolean{return check(x);}")
+    rs.write_text("pub fn check(x:bool)->bool{check(x)}")
+    ast = compare_parity(ParityContext(build_syntax_context()), ts, rs)
+    answer = ModelChecker().check(ast["left"]["shared_ast"], ast["right"]["shared_ast"], "check")
+    assert answer["status"] == "unsupported" and "Recursion" in answer["reason"]
+    with pytest.raises(ValueError, match="timeout"):
+        ModelChecker(0)
+
+
+@pytest.mark.integration
+def test_multi_function_cli_and_actual_threshold_regression(request, tmp_path, capsys):
+    root = ROOT / "examples/port"
+    args = [
+        str(root / "before.ts"),
+        str(root / "after.rs"),
+        "--verify",
+        "--backend",
+        request.config.getoption("--integration-backend"),
+        "--timeout",
+        "120",
+        "--format",
+        "json",
+        "--json-output",
+        str(tmp_path / "report.json"),
+        "--output-dir",
+        str(tmp_path / "queries"),
+    ]
+    assert main(args) == 0
+    report = json.loads(capsys.readouterr().out)
+    assert report["status"] == "verified_model"
+    assert {function["name"] for function in report["functions"]} == {"eligible", "shipping"}
+    assert (tmp_path / "queries/shipping.smt2").is_file()
+    broken = tmp_path / "threshold.rs"
+    broken.write_text((root / "after.rs").read_text().replace(">= 100.0", "> 100.0"))
+    args[1] = str(broken)
+    assert main(args) == 1
+    report = json.loads(capsys.readouterr().out)
+    shipping = next(function for function in report["functions"] if function["name"] == "shipping")
+    assert any(difference["input"][0]["value"] == "100.0" for difference in shipping["differences"])

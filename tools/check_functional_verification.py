@@ -55,6 +55,25 @@ def main() -> int:
             {"id": case["id"], "expected": case["expected"], "passed": passed, "report": report}
         )
         print(f"{case['id']}: {report['status']} ({'PASS' if passed else 'FAIL'})", flush=True)
+    for filename, expected in (
+        ("after.rs", "verified_model"),
+        ("threshold-regression.rs", "confirmed_difference"),
+    ):
+        folder = ROOT / "examples/port"
+        report = verify_functions(context, folder / "before.ts", folder / filename)
+        passed = report["status"] == expected
+        results.append(
+            {
+                "id": f"shipping-port/{filename}",
+                "expected": expected,
+                "passed": passed,
+                "report": report,
+            }
+        )
+        print(
+            f"shipping-port/{filename}: {report['status']} ({'PASS' if passed else 'FAIL'})",
+            flush=True,
+        )
     summary = {
         "total": len(results),
         "passed": sum(case["passed"] for case in results),

@@ -36,6 +36,7 @@ def main():
         ["cargo", "--version"],
         ["rustc", "--version"],
         ["git", "--version"],
+        ["git", "rev-parse", "HEAD"],
     ]
     if args.backend == "docker":
         commands += [
@@ -85,6 +86,7 @@ def main():
         "tree-sitter",
         "tree-sitter-typescript",
         "tree-sitter-rust",
+        "z3-solver",
         "pytest",
         "pytest-cov",
         "ruff",
