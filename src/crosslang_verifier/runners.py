@@ -232,7 +232,7 @@ class IsolatedRunner:
     def execute(
         self, pair: Pair, resolution: Resolution, candidates: list[Value]
     ) -> list[Execution]:
-        with tempfile.TemporaryDirectory(prefix="obscuretone-") as directory:
+        with tempfile.TemporaryDirectory(prefix="crosslang-verifier-") as directory:
             root = Path(directory)
             write_project(root, pair, resolution, candidates)
             return [
@@ -248,7 +248,7 @@ class IsolatedRunner:
             "timeout and output bounds"
         )
         result = Execution(language, "error", backend=self.backend, isolation=isolation)
-        name = f"obscuretone-{uuid.uuid4().hex}"
+        name = f"crosslang-verifier-{uuid.uuid4().hex}"
         env = {
             k: v
             for k, v in os.environ.items()

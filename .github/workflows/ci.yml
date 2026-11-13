@@ -42,6 +42,11 @@ jobs:
           ruff check .
           ruff format --check .
           python -m build
+      - name: Check renamed command entry points
+        run: |
+          crosslang-verifier --version
+          obscuretone-diff --version
+          python -m crosslang_verifier --version
       - name: Verify fixture generator is reproducible
         run: |
           python tools/generate_fixtures.py
@@ -50,16 +55,24 @@ jobs:
         run: |
           mkdir -p ci-evidence
           pytest -q --run-integration --integration-backend=${{ matrix.backend }} \
-            --cov=obscuretone_semantic_diff --cov-fail-under=85 \
+            --cov=crosslang_verifier --cov-fail-under=85 \
             --cov-report=term-missing --cov-report=json:ci-evidence/coverage.json \
             --junitxml=ci-evidence/pytest.xml
       - name: Emit complete CLI corpus evidence
         run: |
-          obscuretone-diff suite fixtures --execute --backend=${{ matrix.backend }} \
+          crosslang-verifier suite fixtures --execute --backend=${{ matrix.backend }} \
             --json-output ci-evidence/corpus.json > ci-evidence/corpus-console.txt
       - name: Record runtime provenance
         if: always()
         run: python tools/record_environment.py --backend=${{ matrix.backend }} --output ci-evidence/environment.json
+      # Keep the named reproduction separate from the historical 40-fixture corpus.
+      - name: Check LinkedIn fallback reproduction
+        run: |
+          python tools/check_linkedin_example.py --backend=${{ matrix.backend }} \
+            --json-output ci-evidence/linkedin-example.json > ci-evidence/linkedin-example-console.txt
+      - name: Record renamed package metadata
+        if: always()
+        run: python -m pip show crosslang-verifier > ci-evidence/package-metadata.txt
       - name: Upload evidence
         if: always()
         uses: actions/upload-artifact@v4

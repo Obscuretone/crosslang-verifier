@@ -17,7 +17,9 @@ from .runners import IsolatedRunner
 
 
 def parser() -> argparse.ArgumentParser:
-    result = argparse.ArgumentParser(description="ObscureTone Semantic Diff — bounded evidence")
+    result = argparse.ArgumentParser(
+        description="crosslang-verifier — Find behavioral differences in cross-language rewrites."
+    )
     result.add_argument("--version", action="version", version=__version__)
     commands = result.add_subparsers(dest="command", required=True)
     for name in ("compare", "suite"):
@@ -106,5 +108,5 @@ def main(argv: list[str] | None = None) -> int:
         if args.format == "json":
             sys.stdout.write(JsonReporter().render({"schema_version": "1.0", "error": str(exc)}))
         else:
-            print(f"ObscureTone Semantic Diff: {exc}", file=sys.stderr)
+            print(f"crosslang-verifier: {exc}", file=sys.stderr)
         return 2

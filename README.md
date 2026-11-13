@@ -1,8 +1,8 @@
-# ObscureTone Semantic Diff
+# crosslang-verifier
 
-**Hear the behavior that syntax hides.**
+**Find behavioral differences in cross-language rewrites.**
 
-[![CI](https://github.com/Obscuretone/obscuretone-semantic-diff/actions/workflows/ci.yml/badge.svg)](https://github.com/Obscuretone/obscuretone-semantic-diff/actions/workflows/ci.yml)
+[![CI](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml/badge.svg)](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
 
 A Python CLI for finding **bounded, reproducible semantic regressions in TypeScript-to-Rust migrations**. Tree-sitter parses both languages; language adapters normalize supported code into a shared IR; a resolution gate and extensible rules generate candidates; isolated Node and Cargo runners check the actual implementations.
@@ -21,8 +21,8 @@ For a present `0`, TypeScript returns `10` while Rust returns `0`. The same mism
 Requirements: Python 3.11+, Docker for isolated execution, and downloaded Node/Rust images. Supported hosts are Linux and macOS. Parsing and static reports need neither Node nor Rust installed on the host.
 
 ```sh
-git clone https://github.com/Obscuretone/obscuretone-semantic-diff.git
-cd obscuretone-semantic-diff
+git clone https://github.com/Obscuretone/crosslang-verifier.git
+cd crosslang-verifier
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e '.[dev]' -c requirements-dev.lock
@@ -30,17 +30,17 @@ docker pull node:22-bookworm-slim
 docker pull rust:1-slim-bookworm
 
 # Static prediction only; never labeled a confirmed difference.
-obscuretone-diff compare fixtures/regressions/01-zero-count/manifest.json
+crosslang-verifier compare fixtures/regressions/01-zero-count/manifest.json
 
 # Execute the original functions. Exit 1 means a confirmed difference.
-obscuretone-diff compare fixtures/regressions/01-zero-count/manifest.json \
+crosslang-verifier compare fixtures/regressions/01-zero-count/manifest.json \
   --execute --json-output evidence/example.json
 
 # A suite exits 0 when every labeled fixture meets its expectation.
-obscuretone-diff suite fixtures --execute --json-output evidence/corpus.json
+crosslang-verifier suite fixtures --execute --json-output evidence/corpus.json
 ```
 
-Use `--format json` for machine-readable stdout. The module entry point also works: `python -m obscuretone_semantic_diff`. Docker images are never downloaded implicitly during a probe. Override image tags with `--node-image` / `--rust-image`; use digest-pinned images for reproducibility.
+Use `--format json` for machine-readable stdout. The module entry point also works: `python -m crosslang_verifier`. Docker images are never downloaded implicitly during a probe. Override image tags with `--node-image` / `--rust-image`; use digest-pinned images for reproducibility.
 
 For **trusted code only**, `--execute --backend local` uses installed Node 22.18+ and Cargo/Rust in fresh temporary projects. This backend runs with your host permissions. It is not a security sandbox.
 
@@ -77,7 +77,7 @@ pytest -q
 
 # All tests, including real isolated Node and Cargo executions.
 pytest --run-integration --integration-backend=docker \
-  --cov=obscuretone_semantic_diff --cov-report=term-missing \
+  --cov=crosslang_verifier --cov-report=term-missing \
   --cov-report=json:evidence/coverage.json --junitxml=evidence/pytest.xml
 
 ruff check .
@@ -87,6 +87,25 @@ python -m build
 
 CI runs all tests on Python 3.11 with local trusted fixture execution and Python 3.13 with Docker isolation, and uploads reports as artifacts. See [architecture](docs/ARCHITECTURE.md), [implementation plan and acceptance criteria](docs/IMPLEMENTATION_PLAN.md), [security boundaries](docs/SECURITY.md), [report contract](docs/REPORT_FORMAT.md), and [contributing](CONTRIBUTING.md).
 
+For compatibility, `obscuretone-diff` remains an alias for `crosslang-verifier`. Python integrations should import `crosslang_verifier`; the former `obscuretone_semantic_diff` import path is not retained.
+
+Historical evidence predates this rename and remains unchanged with its original names, hashes, commands, and GitHub run links.
+
+## Check the LinkedIn example
+
+The [independent error-fallback reproduction](examples/linkedin-error-fallback/) follows the
+LinkedIn discussion and the underlying GitHub migration report. It executes the TypeScript
+original, the regressed Rust fallback and a preserving Rust control over four explicit inputs:
+
+```sh
+python tools/check_linkedin_example.py --backend docker \
+  --json-output demo-evidence/linkedin-example.json
+```
+
+The checked script returns `0` when it observes the expected empty-string difference and the
+preserving control matches. It returns `2` for inconclusive execution, never a false pass.
+These are minimal examples; no audit of GitHub's production source is claimed.
+
 The context object injects adapters, resolution, candidates, rules and runners. Services are aliased to local variables at function entry. Protocols and a versioned report model provide extension points for more languages, compiler-backed resolution, SARIF reporters and GitHub Action integrations. Those integrations are future work, not advertised as shipped.
 
-MIT licensed. Built under the **ObscureTone** name.
+MIT licensed. Created and maintained by **ObscureTone**.

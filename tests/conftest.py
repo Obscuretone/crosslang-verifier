@@ -2,9 +2,9 @@ from pathlib import Path
 
 import pytest
 
-from obscuretone_semantic_diff.context import build_context
-from obscuretone_semantic_diff.models import load_pair
-from obscuretone_semantic_diff.runners import IsolatedRunner
+from crosslang_verifier.context import build_context
+from crosslang_verifier.models import load_pair
+from crosslang_verifier.runners import IsolatedRunner
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFESTS = sorted((ROOT / "fixtures").rglob("manifest.json"))

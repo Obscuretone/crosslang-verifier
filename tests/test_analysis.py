@@ -5,9 +5,9 @@ from pathlib import Path
 import pytest
 from conftest import MANIFESTS
 
-from obscuretone_semantic_diff.engine import analyze
-from obscuretone_semantic_diff.models import Execution, InputError, Value, digest, load_pair
-from obscuretone_semantic_diff.rules import RuleRegistry
+from crosslang_verifier.engine import analyze
+from crosslang_verifier.models import Execution, InputError, Value, digest, load_pair
+from crosslang_verifier.rules import RuleRegistry
 
 
 def changed(source, content):
@@ -115,7 +115,7 @@ def test_empty_rule_registry(context, pair):
 
 
 def test_custom_rule_extension(context, pair):
-    from obscuretone_semantic_diff.models import RuleAssessment
+    from crosslang_verifier.models import RuleAssessment
 
     class Rule:
         def assess(self, ts, rust, resolution, candidates):

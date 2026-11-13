@@ -81,7 +81,7 @@ def main():
             ],
         ]
     packages = [
-        "obscuretone-semantic-diff",
+        "crosslang-verifier",
         "tree-sitter",
         "tree-sitter-typescript",
         "tree-sitter-rust",

@@ -3,9 +3,9 @@ requires = ["hatchling>=1.27,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "obscuretone-semantic-diff"
+name = "crosslang-verifier"
 version = "0.1.0"
-description = "Evidence-first semantic regression checks for TypeScript to Rust migrations"
+description = "Find behavioral differences in cross-language rewrites."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
@@ -20,10 +20,11 @@ dependencies = [
 dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.12,<1", "build>=1,<2"]
 
 [project.scripts]
-obscuretone-diff = "obscuretone_semantic_diff.cli:main"
+crosslang-verifier = "crosslang_verifier.cli:main"
+obscuretone-diff = "crosslang_verifier.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/obscuretone_semantic_diff"]
+packages = ["src/crosslang_verifier"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -16,7 +16,7 @@ class JsonReporter:
 class ConsoleReporter:
     def render(self, payload: dict[str, Any]) -> str:
         reports = payload.get("reports", [payload])
-        lines = ["ObscureTone Semantic Diff · bounded behavioral evidence"]
+        lines = ["crosslang-verifier · bounded behavioral evidence"]
         for report in reports:
             lines.append(f"{report['pair_id']}: {report['status']}")
             for assessment in report["assessments"]:

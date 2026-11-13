@@ -4,8 +4,8 @@ import sys
 
 import pytest
 
-from obscuretone_semantic_diff.models import InputError, Value
-from obscuretone_semantic_diff.runners import (
+from crosslang_verifier.models import InputError, Value
+from crosslang_verifier.runners import (
     IsolatedRunner,
     bounded_process,
     decode_observations,
@@ -130,9 +130,9 @@ def test_subprocess_captures_both_streams_and_exit(tmp_path):
 
 
 def test_missing_runtime_is_not_a_behavior_difference(context, pair, monkeypatch):
-    from obscuretone_semantic_diff.engine import analyze
+    from crosslang_verifier.engine import analyze
 
-    monkeypatch.setattr("obscuretone_semantic_diff.runners.shutil.which", lambda _: None)
+    monkeypatch.setattr("crosslang_verifier.runners.shutil.which", lambda _: None)
     report = analyze(context, pair, execute=True)
     assert report.status == "inconclusive"
     assert all(run.error for run in report.executions)

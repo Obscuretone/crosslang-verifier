@@ -5,10 +5,10 @@ import pytest
 from conftest import MANIFESTS, ROOT
 from test_analysis import changed
 
-from obscuretone_semantic_diff.cli import main
-from obscuretone_semantic_diff.engine import analyze
-from obscuretone_semantic_diff.models import Value, load_pair
-from obscuretone_semantic_diff.runners import IsolatedRunner
+from crosslang_verifier.cli import main
+from crosslang_verifier.engine import analyze
+from crosslang_verifier.models import Value, load_pair
+from crosslang_verifier.runners import IsolatedRunner
 
 pytestmark = pytest.mark.integration
 
@@ -78,7 +78,7 @@ def test_cli_confirmed_exit_and_report(integration_context, tmp_path, capsys):
 
 
 def test_local_trusted_node_runner(pair, context, tmp_path):
-    from obscuretone_semantic_diff.runners import write_project
+    from crosslang_verifier.runners import write_project
 
     ts = context.adapters["typescript"].normalize(pair.typescript)
     rust = context.adapters["rust"].normalize(pair.rust)

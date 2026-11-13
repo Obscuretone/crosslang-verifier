@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "linkedin-error-regression",
+  "expected": "regression",
+  "assumptions": {
+    "typescript_type": "string|null|undefined",
+    "rust_type": "std::option::Option<&str>",
+    "rust_method": "std::option::Option::unwrap_or",
+    "input_mapping": "nullish-to-none;present-to-some",
+    "domain": "string",
+    "allowed_inputs": [
+      {
+        "kind": "undefined",
+        "value": null
+      },
+      {
+        "kind": "null",
+        "value": null
+      },
+      {
+        "kind": "string",
+        "value": ""
+      },
+      {
+        "kind": "string",
+        "value": "timeout"
+      }
+    ],
+    "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+  },
+  "typescript": {
+    "path": "original.ts",
+    "function": "evaluate",
+    "sha256": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c"
+  },
+  "rust": {
+    "path": "migrated.rs",
+    "function": "evaluate",
+    "sha256": "49436888ea67a59a3f1ecf949615be425e7739c2c1701c464b6fad919d96b62e"
+  }
+}

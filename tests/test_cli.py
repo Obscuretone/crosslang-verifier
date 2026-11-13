@@ -2,7 +2,7 @@ import json
 
 from conftest import ROOT
 
-from obscuretone_semantic_diff.cli import main
+from crosslang_verifier.cli import main
 
 REGRESSION = ROOT / "fixtures/regressions/01-zero-count/manifest.json"
 
@@ -43,7 +43,7 @@ def test_bad_manifest_json(tmp_path, capsys):
 
 def test_bad_manifest_console(tmp_path, capsys):
     assert main(["compare", str(tmp_path / "missing")]) == 2
-    assert "ObscureTone" in capsys.readouterr().err
+    assert "crosslang-verifier" in capsys.readouterr().err
 
 
 def test_invalid_timeout(capsys):
