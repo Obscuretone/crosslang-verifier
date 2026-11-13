@@ -61,7 +61,7 @@ Each JSON report contains source and manifest SHA-256 hashes, source spans, decl
 
 The committed [evidence](evidence/README.md) records actual checks, tool versions, limitations and reproducible reports. There are **20 synthetic known regressions and 20 preserving controls** with per-case descriptions and designated regression witnesses. They are a focused correctness corpus, not a production benchmark or a measure of general detection accuracy.
 
-[Validated CI results](evidence/RESULTS.md): **179 tests passed on each of Python 3.11/local and Python 3.13/Docker**, with all 40 corpus expectations met. Docker-job statement coverage was **95.0%**. The macOS developer host had inconclusive Docker runner failures; the evidence records those separately.
+[Renamed-package validation](evidence/renamed/RESULTS.md): **184 tests passed on each of Python 3.11/local and Python 3.13/Docker**, with all 40 corpus expectations and all four LinkedIn demo checks met. Docker-job statement coverage was **95.0%**. [Original validation](evidence/RESULTS.md) and developer-host limitations remain preserved separately.
 
 ## Resolution is mandatory
 

@@ -1,0 +1,164 @@
+crosslang-verifier · bounded behavioral evidence
+01-nullish-number: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+02-nullish-bool: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+03-nullish-string: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+04-filter-number: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+05-filter-bool: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+06-filter-string: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+07-false-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+08-empty-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+09-zero-restricted: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+10-positive-restricted: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+11-true-restricted: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+12-nonempty-restricted: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+13-nullish-negative-zero: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+14-nullish-false: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+15-nullish-unicode: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+16-nullish-escaped: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+17-filter-zero-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+18-filter-negative-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+19-filter-false-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+20-filter-empty-default: no_difference_observed
+  STATIC CHECK [OT-FALLBACK-001]: No candidate difference predicted under assumptions; execution required.
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+01-zero-count: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '10.0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '10.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '10.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+02-zero-retries: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '-1.0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '-1.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '-1.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+03-zero-fraction: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '0.25'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '0.25'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '0.25'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+04-negative-zero: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '1.0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '1.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '1.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+05-nan-reading: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '42.0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '42.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '42.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+06-signed-zero-default: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '-0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '-0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+07-disabled-flag: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'boolean', 'value': False} TypeScript={'kind': 'boolean', 'value': True} Rust={'kind': 'boolean', 'value': False}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+08-empty-username: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'string', 'value': ''} TypeScript={'kind': 'string', 'value': 'anonymous'} Rust={'kind': 'string', 'value': ''}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+09-empty-label: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'string', 'value': ''} TypeScript={'kind': 'string', 'value': 'untitled'} Rust={'kind': 'string', 'value': ''}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+10-empty-unicode: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'string', 'value': ''} TypeScript={'kind': 'string', 'value': '音'} Rust={'kind': 'string', 'value': ''}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+11-empty-escaped: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'string', 'value': ''} TypeScript={'kind': 'string', 'value': 'line\n"quoted"'} Rust={'kind': 'string', 'value': ''}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+12-zero-timeout: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '3000.0'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '3000.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '3000.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+13-zero-offset: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '-0.5'} Rust={'kind': 'number', 'value': '0.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '-0.5'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '-0.5'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+14-nan-zero-default: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '0.0'} Rust={'kind': 'number', 'value': '-0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': '0.0'} Rust={'kind': 'number', 'value': 'NaN'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+15-nullish-overfiltered-number: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'number', 'value': '0.0'} TypeScript={'kind': 'number', 'value': '0.0'} Rust={'kind': 'number', 'value': '9.0'}
+  CONFIRMED input={'kind': 'number', 'value': '-0'} TypeScript={'kind': 'number', 'value': '-0'} Rust={'kind': 'number', 'value': '9.0'}
+  CONFIRMED input={'kind': 'number', 'value': 'NaN'} TypeScript={'kind': 'number', 'value': 'NaN'} Rust={'kind': 'number', 'value': '9.0'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+16-nullish-overfiltered-bool: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'boolean', 'value': False} TypeScript={'kind': 'boolean', 'value': False} Rust={'kind': 'boolean', 'value': True}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+17-nullish-overfiltered-string: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'string', 'value': ''} TypeScript={'kind': 'string', 'value': ''} Rust={'kind': 'string', 'value': 'default'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+18-changed-missing-number: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'null', 'value': None} TypeScript={'kind': 'number', 'value': '1.0'} Rust={'kind': 'number', 'value': '2.0'}
+  CONFIRMED input={'kind': 'undefined', 'value': None} TypeScript={'kind': 'number', 'value': '1.0'} Rust={'kind': 'number', 'value': '2.0'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+19-changed-missing-bool: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'null', 'value': None} TypeScript={'kind': 'boolean', 'value': False} Rust={'kind': 'boolean', 'value': True}
+  CONFIRMED input={'kind': 'undefined', 'value': None} TypeScript={'kind': 'boolean', 'value': False} Rust={'kind': 'boolean', 'value': True}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+20-changed-missing-string: confirmed_difference
+  STATIC WARNING [OT-FALLBACK-001]: Resolved fallback policies predict a candidate difference; execution required.
+  CONFIRMED input={'kind': 'null', 'value': None} TypeScript={'kind': 'string', 'value': 'old'} Rust={'kind': 'string', 'value': 'new'}
+  CONFIRMED input={'kind': 'undefined', 'value': None} TypeScript={'kind': 'string', 'value': 'old'} Rust={'kind': 'string', 'value': 'new'}
+  Scope: Bounded candidates under declared assumptions; no full semantic equivalence.
+Suite: {'no_difference_observed': 20, 'confirmed_difference': 20, 'total': 40, 'expected_passed': 40, 'expected_failed': 0}
+No full semantic equivalence is claimed.

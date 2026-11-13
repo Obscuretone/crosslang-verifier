@@ -1,0 +1,134 @@
+{
+  "recorded_at": "2026-11-13T01:12:44.962562+00:00",
+  "backend": "docker",
+  "python": "3.13.18",
+  "platform": "Linux-7.0.0-1019-azure-x86_64-with-glibc2.43",
+  "packages": {
+    "crosslang-verifier": "0.1.0",
+    "tree-sitter": "0.26.1",
+    "tree-sitter-typescript": "0.23.2",
+    "tree-sitter-rust": "0.24.2",
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "ruff": "0.17.5",
+    "build": "1.6.1"
+  },
+  "tools": [
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "v22.23.4",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "cargo",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "rustc",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "git version 2.56.1",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "version",
+        "--format",
+        "{{.Server.Version}}"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "29.4.2",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "image",
+        "inspect",
+        "node:22-bookworm-slim",
+        "rust:1-slim-bookworm",
+        "--format",
+        "{{.RepoTags}} {{.RepoDigests}} {{.Architecture}}"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "[node:22-bookworm-slim] [node@sha256:e9f565d32859f0cbfb52125eafe8be39390f24dac302dc3cdf566e8ba3ab21ee] amd64\n[rust:1-slim-bookworm] [rust@sha256:7c7d4eb4d05b7781187a327809466cfddf29753f6defdc3d19a0e291951b7a37] amd64",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network=none",
+        "--pull=never",
+        "node:22-bookworm-slim",
+        "node",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "v22.23.5",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network=none",
+        "--pull=never",
+        "rust:1-slim-bookworm",
+        "cargo",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "cargo 1.100.0 (3acc79c0c 2026-11-05)",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "docker",
+        "run",
+        "--rm",
+        "--network=none",
+        "--pull=never",
+        "rust:1-slim-bookworm",
+        "rustc",
+        "--version"
+      ],
+      "available": true,
+      "exit_code": 0,
+      "stdout": "rustc 1.100.0 (0ef1bc386 2026-11-09)",
+      "stderr": ""
+    }
+  ],
+  "note": "Actual tool output; no benchmark or equivalence claim."
+}

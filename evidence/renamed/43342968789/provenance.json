@@ -1,0 +1,93 @@
+{
+  "workflow_run": "https://github.com/Obscuretone/crosslang-verifier/actions/runs/43342968789",
+  "tested_commit": "7cef634638be84014bee585f3a922f954c03185c",
+  "repository_id": 1455935537,
+  "historical_baseline": "fd825887c1052d73260b8a420ee073ce7e883d8a",
+  "historical_files_verified_unchanged": 147,
+  "jobs": [
+    {
+      "job": "evidence-py3.11-local",
+      "tests": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "184",
+        "time": "8.084",
+        "timestamp": "2026-11-13T01:11:33.996019+00:00",
+        "hostname": "runnervmwuk1x"
+      },
+      "coverage_percent": 94.21875,
+      "corpus": {
+        "no_difference_observed": 20,
+        "confirmed_difference": 20,
+        "total": 40,
+        "expected_passed": 40,
+        "expected_failed": 0
+      },
+      "demo_checks": {
+        "complete_four_input_domain": true,
+        "regression_confirmed_by_execution": true,
+        "only_empty_string_is_a_counterexample": true,
+        "preserving_version_matches_candidates": true
+      }
+    },
+    {
+      "job": "evidence-py3.13-docker",
+      "tests": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "184",
+        "time": "32.270",
+        "timestamp": "2026-11-13T01:11:52.217463+00:00",
+        "hostname": "runnervmccnms"
+      },
+      "coverage_percent": 95.0,
+      "corpus": {
+        "no_difference_observed": 20,
+        "confirmed_difference": 20,
+        "total": 40,
+        "expected_passed": 40,
+        "expected_failed": 0
+      },
+      "demo_checks": {
+        "complete_four_input_domain": true,
+        "regression_confirmed_by_execution": true,
+        "only_empty_string_is_a_counterexample": true,
+        "preserving_version_matches_candidates": true
+      }
+    }
+  ],
+  "artifact_archives": [
+    {
+      "id": 13999728973,
+      "name": "evidence-py3.11-local",
+      "sha256": "6cdab9bc924f6b9e01cf1bcfa70e50f2c23235d827712a40bfbe57e7dbd9ad42"
+    },
+    {
+      "id": 13999469596,
+      "name": "evidence-py3.13-docker",
+      "sha256": "a0ea75be08fb6034b08e61fe3602d6650d6d235c1641e064c83b3f858acea5f3"
+    }
+  ],
+  "files": {
+    "evidence-py3.11-local/corpus-console.txt": "7f6bbed2c344ca68c08b89efb2325952934a452407d756761bb273b02de1748a",
+    "evidence-py3.11-local/corpus.json": "bbfe9080139b02728824cf505e7f1e780bf701882f818b6c6e758ff8b68f69cd",
+    "evidence-py3.11-local/coverage.json": "2a461fa0c30387d3d65f2f266f6fed0e314c2471175adb2514b874c61c771f14",
+    "evidence-py3.11-local/environment.json": "55f478854e222876f570878d9da2c39117ac2375e6855160bedf6c7164a6702d",
+    "evidence-py3.11-local/linkedin-example-console.txt": "9ad4c8208302ba5250f3c43f4105efc00ede9cb99c551586af6389542cca1e9c",
+    "evidence-py3.11-local/linkedin-example.json": "5dd8eed6a5b262c4cebeb4ef54a41745f7e4c170a561f0b643a355c09bc330d4",
+    "evidence-py3.11-local/package-metadata.txt": "6856c8e2bd77598242642776f2e7ef31747ce9b308c5352818c43288e5317a1e",
+    "evidence-py3.11-local/pytest.xml": "060234ba22d602af07ea2e52d9937ccaa6d9d789121f20813f0e9ba3b822a824",
+    "evidence-py3.13-docker/corpus-console.txt": "7f6bbed2c344ca68c08b89efb2325952934a452407d756761bb273b02de1748a",
+    "evidence-py3.13-docker/corpus.json": "b02bec8d2b18a4b68640eeb32bc4ca1d41729abf0345dd391d916d3e139ad7db",
+    "evidence-py3.13-docker/coverage.json": "ea8a62b1402f7b3f911c0d993462bc171702cc604ebb8af4fba50e4f03cc5c20",
+    "evidence-py3.13-docker/environment.json": "33f56f3e92da887a73eabf6719bbefb8fefe8fb22d40e5beb445eaf0fd6fed26",
+    "evidence-py3.13-docker/linkedin-example-console.txt": "9ad4c8208302ba5250f3c43f4105efc00ede9cb99c551586af6389542cca1e9c",
+    "evidence-py3.13-docker/linkedin-example.json": "1cdae377c2b94e6e7c72625a4df0dfbbc0dc1e977fc894da4e3787f5aa5e945a",
+    "evidence-py3.13-docker/package-metadata.txt": "72ef1a77bf1682cdfe1701fbbc27f83f8c25e4abd0a52bbdd8f870db70b85f14",
+    "evidence-py3.13-docker/pytest.xml": "6f9175c6b16d87148a5b984ef46a0fb119dce56d43756d840e1adcb71f826358"
+  }
+}

@@ -1,0 +1,11 @@
+Name: crosslang-verifier
+Version: 0.1.0
+Summary: Find behavioral differences in cross-language rewrites.
+Home-page: 
+Author: ObscureTone
+Author-email: 
+License-Expression: MIT
+Location: /opt/hostedtoolcache/Python/3.11.18/x64/lib/python3.11/site-packages
+Editable project location: /home/runner/work/crosslang-verifier/crosslang-verifier
+Requires: tree-sitter, tree-sitter-rust, tree-sitter-typescript
+Required-by: 

@@ -1,0 +1,6 @@
+crosslang-verifier LinkedIn example: passed
+  PASS complete_four_input_domain
+  PASS regression_confirmed_by_execution
+  PASS only_empty_string_is_a_counterexample
+  PASS preserving_version_matches_candidates
+Bounded observations only; no full semantic equivalence is claimed.

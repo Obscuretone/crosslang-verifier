@@ -1,0 +1,455 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-13T01:08:33.940373+00:00",
+  "script_sha256": "77b608d3deaf6e1bac57a9f08ec98dda0223f104d71626813e034f8d2cd56276",
+  "linkedin_post": "https://lnkd.in/p/gcqsjx2n",
+  "technical_source": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+  "reproduction": "Independent minimal example; no audit of GitHub's source code.",
+  "status": "inconclusive",
+  "checks": {
+    "complete_four_input_domain": true,
+    "regression_confirmed_by_execution": false,
+    "only_empty_string_is_a_counterexample": false,
+    "preserving_version_matches_candidates": false
+  },
+  "reports": [
+    {
+      "pair_id": "linkedin-error-regression",
+      "status": "inconclusive",
+      "sources": {
+        "typescript": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c",
+        "rust": "49436888ea67a59a3f1ecf949615be425e7739c2c1701c464b6fad919d96b62e"
+      },
+      "manifest_sha256": "ae44ac441165327ba257206d9539b95d3f58c70352cc509ed4bd54f440d9164a",
+      "assumptions": {
+        "typescript_type": "string|null|undefined",
+        "rust_type": "std::option::Option<&str>",
+        "rust_method": "std::option::Option::unwrap_or",
+        "input_mapping": "nullish-to-none;present-to-some",
+        "domain": "string",
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ],
+        "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+      },
+      "resolution": {
+        "domain": "string",
+        "rust_inner": "&str",
+        "evidence": {
+          "provider": "explicit_fixture_assumptions",
+          "compiler_verified": false,
+          "method": "std::option::Option::unwrap_or",
+          "source_hashes_validated": true,
+          "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+        },
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ]
+      },
+      "ir": [
+        {
+          "language": "typescript",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "string|null|undefined",
+          "trigger": "falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/work/crosslang-verifier-live/examples/linkedin-error-fallback/original.ts",
+            "start_line": 2,
+            "start_column": 12,
+            "end_line": 2,
+            "end_column": 36
+          },
+          "source_sha256": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c"
+        },
+        {
+          "language": "rust",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "std::option::Option<&str>",
+          "trigger": "none",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/work/crosslang-verifier-live/examples/linkedin-error-fallback/migrated.rs",
+            "start_line": 2,
+            "start_column": 5,
+            "end_line": 2,
+            "end_column": 37
+          },
+          "source_sha256": "49436888ea67a59a3f1ecf949615be425e7739c2c1701c464b6fad919d96b62e"
+        }
+      ],
+      "assessments": [
+        {
+          "rule_id": "OT-FALLBACK-001",
+          "message": "Resolved fallback policies predict a candidate difference; execution required.",
+          "warning": true
+        }
+      ],
+      "candidates": [
+        {
+          "kind": "undefined",
+          "value": null
+        },
+        {
+          "kind": "null",
+          "value": null
+        },
+        {
+          "kind": "string",
+          "value": ""
+        },
+        {
+          "kind": "string",
+          "value": "timeout"
+        }
+      ],
+      "executions": [
+        {
+          "language": "typescript",
+          "status": "error",
+          "observations": [],
+          "commands": [
+            [
+              "/usr/local/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-e70f237af14d4ae2b7fb6cb8e40bc6b6",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/crosslang-verifier-7rot675w,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "node:22-bookworm-slim",
+              "node",
+              "--experimental-strip-types",
+              "harness.mjs"
+            ]
+          ],
+          "stdout": "",
+          "stderr": "failed to connect to the docker API at unix:///Users/evandentremont/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/evandentremont/.docker/run/docker.sock: connect: no such file or directory\n",
+          "error": "Process exited with status 1",
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        },
+        {
+          "language": "rust",
+          "status": "error",
+          "observations": [],
+          "commands": [
+            [
+              "/usr/local/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-9384b987d4914b0195d9d0f001d84fd8",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/crosslang-verifier-7rot675w,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "rust:1-slim-bookworm",
+              "cargo",
+              "run",
+              "--quiet",
+              "--offline",
+              "--locked",
+              "--target-dir",
+              "/tmp/target"
+            ]
+          ],
+          "stdout": "",
+          "stderr": "failed to connect to the docker API at unix:///Users/evandentremont/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/evandentremont/.docker/run/docker.sock: connect: no such file or directory\n",
+          "error": "Process exited with status 1",
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        }
+      ],
+      "differences": [],
+      "limitations": [
+        "Bounded candidates under declared assumptions; no full semantic equivalence.",
+        "Both runners must succeed with a complete observation protocol"
+      ],
+      "schema_version": "1.0",
+      "equivalence_claim": false
+    },
+    {
+      "pair_id": "linkedin-error-control",
+      "status": "inconclusive",
+      "sources": {
+        "typescript": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c",
+        "rust": "905de197d8f8f4b4086209ba0dd037c1d8fd479f5a348cc87d2adcfffc8d7e61"
+      },
+      "manifest_sha256": "246f4f27d00f93b4f98028fec2cb73b1257aac99620310ca7f36dbf73667fda1",
+      "assumptions": {
+        "typescript_type": "string|null|undefined",
+        "rust_type": "std::option::Option<&str>",
+        "rust_method": "std::option::Option::unwrap_or",
+        "input_mapping": "nullish-to-none;present-to-some",
+        "domain": "string",
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ],
+        "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed.",
+        "rust_filter_method": "std::option::Option::filter"
+      },
+      "resolution": {
+        "domain": "string",
+        "rust_inner": "&str",
+        "evidence": {
+          "provider": "explicit_fixture_assumptions",
+          "compiler_verified": false,
+          "method": "std::option::Option::unwrap_or",
+          "source_hashes_validated": true,
+          "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+        },
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ]
+      },
+      "ir": [
+        {
+          "language": "typescript",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "string|null|undefined",
+          "trigger": "falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/work/crosslang-verifier-live/examples/linkedin-error-fallback/original.ts",
+            "start_line": 2,
+            "start_column": 12,
+            "end_line": 2,
+            "end_column": 36
+          },
+          "source_sha256": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c"
+        },
+        {
+          "language": "rust",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "std::option::Option<&str>",
+          "trigger": "filtered_falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/Users/evandentremont/Documents/Codex/2026-11-11/referenced-chatgpt-conversation-this-is-an/work/crosslang-verifier-live/examples/linkedin-error-fallback/preserving.rs",
+            "start_line": 2,
+            "start_column": 5,
+            "end_line": 2,
+            "end_column": 63
+          },
+          "source_sha256": "905de197d8f8f4b4086209ba0dd037c1d8fd479f5a348cc87d2adcfffc8d7e61"
+        }
+      ],
+      "assessments": [
+        {
+          "rule_id": "OT-FALLBACK-001",
+          "message": "No candidate difference predicted under assumptions; execution required.",
+          "warning": false
+        }
+      ],
+      "candidates": [
+        {
+          "kind": "undefined",
+          "value": null
+        },
+        {
+          "kind": "null",
+          "value": null
+        },
+        {
+          "kind": "string",
+          "value": ""
+        },
+        {
+          "kind": "string",
+          "value": "timeout"
+        }
+      ],
+      "executions": [
+        {
+          "language": "typescript",
+          "status": "error",
+          "observations": [],
+          "commands": [
+            [
+              "/usr/local/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-1fd15bf596c840a6be73402fc517b057",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/crosslang-verifier-t6s2sxqv,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "node:22-bookworm-slim",
+              "node",
+              "--experimental-strip-types",
+              "harness.mjs"
+            ]
+          ],
+          "stdout": "",
+          "stderr": "failed to connect to the docker API at unix:///Users/evandentremont/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/evandentremont/.docker/run/docker.sock: connect: no such file or directory\n",
+          "error": "Process exited with status 1",
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        },
+        {
+          "language": "rust",
+          "status": "error",
+          "observations": [],
+          "commands": [
+            [
+              "/usr/local/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-047315976f5e42fda7d5efc55de570b3",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/var/folders/28/_1d6bx9j1kgg88nkj3hntfrh0000gn/T/crosslang-verifier-t6s2sxqv,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "rust:1-slim-bookworm",
+              "cargo",
+              "run",
+              "--quiet",
+              "--offline",
+              "--locked",
+              "--target-dir",
+              "/tmp/target"
+            ]
+          ],
+          "stdout": "",
+          "stderr": "failed to connect to the docker API at unix:///Users/evandentremont/.docker/run/docker.sock; check if the path is correct and if the daemon is running: dial unix /Users/evandentremont/.docker/run/docker.sock: connect: no such file or directory\n",
+          "error": "Process exited with status 1",
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        }
+      ],
+      "differences": [],
+      "limitations": [
+        "Bounded candidates under declared assumptions; no full semantic equivalence.",
+        "Both runners must succeed with a complete observation protocol"
+      ],
+      "schema_version": "1.0",
+      "equivalence_claim": false
+    }
+  ],
+  "equivalence_claim": false
+}

@@ -1,0 +1,537 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-11-13T01:12:46.614522+00:00",
+  "script_sha256": "3d2a607d86966a1333b0ffed4d1b2f4d95d142276cb47c2ff20b1df025bd1391",
+  "linkedin_post": "https://lnkd.in/p/gcqsjx2n",
+  "technical_source": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+  "reproduction": "Independent minimal example; no audit of GitHub's source code.",
+  "status": "passed",
+  "checks": {
+    "complete_four_input_domain": true,
+    "regression_confirmed_by_execution": true,
+    "only_empty_string_is_a_counterexample": true,
+    "preserving_version_matches_candidates": true
+  },
+  "reports": [
+    {
+      "pair_id": "linkedin-error-regression",
+      "status": "confirmed_difference",
+      "sources": {
+        "typescript": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c",
+        "rust": "49436888ea67a59a3f1ecf949615be425e7739c2c1701c464b6fad919d96b62e"
+      },
+      "manifest_sha256": "ae44ac441165327ba257206d9539b95d3f58c70352cc509ed4bd54f440d9164a",
+      "assumptions": {
+        "typescript_type": "string|null|undefined",
+        "rust_type": "std::option::Option<&str>",
+        "rust_method": "std::option::Option::unwrap_or",
+        "input_mapping": "nullish-to-none;present-to-some",
+        "domain": "string",
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ],
+        "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+      },
+      "resolution": {
+        "domain": "string",
+        "rust_inner": "&str",
+        "evidence": {
+          "provider": "explicit_fixture_assumptions",
+          "compiler_verified": false,
+          "method": "std::option::Option::unwrap_or",
+          "source_hashes_validated": true,
+          "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+        },
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ]
+      },
+      "ir": [
+        {
+          "language": "typescript",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "string|null|undefined",
+          "trigger": "falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/home/runner/work/crosslang-verifier/crosslang-verifier/examples/linkedin-error-fallback/original.ts",
+            "start_line": 2,
+            "start_column": 12,
+            "end_line": 2,
+            "end_column": 36
+          },
+          "source_sha256": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c"
+        },
+        {
+          "language": "rust",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "std::option::Option<&str>",
+          "trigger": "none",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/home/runner/work/crosslang-verifier/crosslang-verifier/examples/linkedin-error-fallback/migrated.rs",
+            "start_line": 2,
+            "start_column": 5,
+            "end_line": 2,
+            "end_column": 37
+          },
+          "source_sha256": "49436888ea67a59a3f1ecf949615be425e7739c2c1701c464b6fad919d96b62e"
+        }
+      ],
+      "assessments": [
+        {
+          "rule_id": "OT-FALLBACK-001",
+          "message": "Resolved fallback policies predict a candidate difference; execution required.",
+          "warning": true
+        }
+      ],
+      "candidates": [
+        {
+          "kind": "undefined",
+          "value": null
+        },
+        {
+          "kind": "null",
+          "value": null
+        },
+        {
+          "kind": "string",
+          "value": ""
+        },
+        {
+          "kind": "string",
+          "value": "timeout"
+        }
+      ],
+      "executions": [
+        {
+          "language": "typescript",
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "timeout"
+            }
+          ],
+          "commands": [
+            [
+              "/usr/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-5f4bb4baacb341f597a5a6affd8d963f",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/tmp/crosslang-verifier-xsmbaqv0,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "node:22-bookworm-slim",
+              "node",
+              "--experimental-strip-types",
+              "harness.mjs"
+            ]
+          ],
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"timeout\"}}\n",
+          "stderr": "",
+          "error": null,
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        },
+        {
+          "language": "rust",
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": ""
+            },
+            {
+              "kind": "string",
+              "value": "timeout"
+            }
+          ],
+          "commands": [
+            [
+              "/usr/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-b9396649a2904ed0a4696cad8f938aaa",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/tmp/crosslang-verifier-xsmbaqv0,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "rust:1-slim-bookworm",
+              "cargo",
+              "run",
+              "--quiet",
+              "--offline",
+              "--locked",
+              "--target-dir",
+              "/tmp/target"
+            ]
+          ],
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"timeout\"}}\n",
+          "stderr": "warning: function `encode_number` is never used\n  --> main.rs:17:4\n   |\n17 | fn encode_number(v: f64) -> String {\n   |    ^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n\n",
+          "error": null,
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        }
+      ],
+      "differences": [
+        {
+          "candidate_index": 2,
+          "input": {
+            "kind": "string",
+            "value": ""
+          },
+          "typescript": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "rust": {
+            "kind": "string",
+            "value": ""
+          }
+        }
+      ],
+      "limitations": [
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
+      ],
+      "schema_version": "1.0",
+      "equivalence_claim": false
+    },
+    {
+      "pair_id": "linkedin-error-control",
+      "status": "no_difference_observed",
+      "sources": {
+        "typescript": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c",
+        "rust": "905de197d8f8f4b4086209ba0dd037c1d8fd479f5a348cc87d2adcfffc8d7e61"
+      },
+      "manifest_sha256": "246f4f27d00f93b4f98028fec2cb73b1257aac99620310ca7f36dbf73667fda1",
+      "assumptions": {
+        "typescript_type": "string|null|undefined",
+        "rust_type": "std::option::Option<&str>",
+        "rust_method": "std::option::Option::unwrap_or",
+        "input_mapping": "nullish-to-none;present-to-some",
+        "domain": "string",
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ],
+        "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed.",
+        "rust_filter_method": "std::option::Option::filter"
+      },
+      "resolution": {
+        "domain": "string",
+        "rust_inner": "&str",
+        "evidence": {
+          "provider": "explicit_fixture_assumptions",
+          "compiler_verified": false,
+          "method": "std::option::Option::unwrap_or",
+          "source_hashes_validated": true,
+          "note": "Independent minimal reproduction of the documented empty-error fallback behavior. Standard primitive strings and Option methods; only the four listed inputs are claimed."
+        },
+        "allowed_inputs": [
+          {
+            "kind": "undefined",
+            "value": null
+          },
+          {
+            "kind": "null",
+            "value": null
+          },
+          {
+            "kind": "string",
+            "value": ""
+          },
+          {
+            "kind": "string",
+            "value": "timeout"
+          }
+        ]
+      },
+      "ir": [
+        {
+          "language": "typescript",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "string|null|undefined",
+          "trigger": "falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/home/runner/work/crosslang-verifier/crosslang-verifier/examples/linkedin-error-fallback/original.ts",
+            "start_line": 2,
+            "start_column": 12,
+            "end_line": 2,
+            "end_column": 36
+          },
+          "source_sha256": "a448ae124ad55da8de0fc367507aa567de98aa057e9acc2d61327b8f18a6f00c"
+        },
+        {
+          "language": "rust",
+          "function": "evaluate",
+          "parameter": "error",
+          "parameter_type": "std::option::Option<&str>",
+          "trigger": "filtered_falsy",
+          "fallback": {
+            "kind": "string",
+            "value": "Unknown error"
+          },
+          "span": {
+            "path": "/home/runner/work/crosslang-verifier/crosslang-verifier/examples/linkedin-error-fallback/preserving.rs",
+            "start_line": 2,
+            "start_column": 5,
+            "end_line": 2,
+            "end_column": 63
+          },
+          "source_sha256": "905de197d8f8f4b4086209ba0dd037c1d8fd479f5a348cc87d2adcfffc8d7e61"
+        }
+      ],
+      "assessments": [
+        {
+          "rule_id": "OT-FALLBACK-001",
+          "message": "No candidate difference predicted under assumptions; execution required.",
+          "warning": false
+        }
+      ],
+      "candidates": [
+        {
+          "kind": "undefined",
+          "value": null
+        },
+        {
+          "kind": "null",
+          "value": null
+        },
+        {
+          "kind": "string",
+          "value": ""
+        },
+        {
+          "kind": "string",
+          "value": "timeout"
+        }
+      ],
+      "executions": [
+        {
+          "language": "typescript",
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "timeout"
+            }
+          ],
+          "commands": [
+            [
+              "/usr/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-425d9ab235bf477aaba93717ecbbeae1",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/tmp/crosslang-verifier-m55s8gzr,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "node:22-bookworm-slim",
+              "node",
+              "--experimental-strip-types",
+              "harness.mjs"
+            ]
+          ],
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"timeout\"}}\n",
+          "stderr": "",
+          "error": null,
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        },
+        {
+          "language": "rust",
+          "status": "ok",
+          "observations": [
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "Unknown error"
+            },
+            {
+              "kind": "string",
+              "value": "timeout"
+            }
+          ],
+          "commands": [
+            [
+              "/usr/bin/docker",
+              "run",
+              "--rm",
+              "--name",
+              "crosslang-verifier-dc79b919b8204c35afeeb7e83a141a41",
+              "--pull=never",
+              "--network=none",
+              "--read-only",
+              "--user=65534:65534",
+              "--cap-drop=ALL",
+              "--security-opt=no-new-privileges",
+              "--pids-limit=64",
+              "--memory=512m",
+              "--cpus=1",
+              "--tmpfs=/tmp:rw,exec,nosuid,nodev,size=268435456",
+              "--mount",
+              "type=bind,src=/tmp/crosslang-verifier-m55s8gzr,dst=/job,readonly",
+              "--workdir=/job",
+              "--env=HOME=/tmp",
+              "--env=CARGO_HOME=/tmp/cargo",
+              "rust:1-slim-bookworm",
+              "cargo",
+              "run",
+              "--quiet",
+              "--offline",
+              "--locked",
+              "--target-dir",
+              "/tmp/target"
+            ]
+          ],
+          "stdout": "{\"id\":0,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":1,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":2,\"output\":{\"kind\":\"string\",\"value\":\"Unknown error\"}}\n{\"id\":3,\"output\":{\"kind\":\"string\",\"value\":\"timeout\"}}\n",
+          "stderr": "warning: function `encode_number` is never used\n  --> main.rs:17:4\n   |\n17 | fn encode_number(v: f64) -> String {\n   |    ^^^^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: function `encode_boolean` is never used\n  --> main.rs:25:4\n   |\n25 | fn encode_boolean(v: bool) -> String {\n   |    ^^^^^^^^^^^^^^\n\n",
+          "error": null,
+          "backend": "docker",
+          "isolation": "container: no network; read-only root and sources; unprivileged; bounded resources"
+        }
+      ],
+      "differences": [],
+      "limitations": [
+        "Bounded candidates under declared assumptions; no full semantic equivalence."
+      ],
+      "schema_version": "1.0",
+      "equivalence_claim": false
+    }
+  ],
+  "equivalence_claim": false
+}
