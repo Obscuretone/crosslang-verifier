@@ -1,5 +1,9 @@
 # Architecture and extension points
 
+The default command takes two file paths and dumps their Tree-sitter syntax trees plus a unified diff. `syntax.py` uses a small `SyntaxContext` containing parsers; it does not construct the behavioral context, load a manifest, resolve types, or execute source files. The raw trees preserve named/anonymous nodes, fields, token text and source positions. Syntax diff rendering excludes positions so formatting outside tokens does not create changes.
+
+The pipeline below describes the optional, original `compare` / `suite` behavioral commands. See [advanced usage](ADVANCED.md) for those commands; the two-file workflow is described in the [README](../README.md).
+
 ```mermaid
 flowchart LR
   M[Manifest and source hashes] --> T[Tree-sitter adapters]

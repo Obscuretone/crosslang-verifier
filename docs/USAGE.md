@@ -1,5 +1,7 @@
 # Pair manifests and supported subset
 
+These are the optional advanced behavioral checks. For ordinary tree dumps, use `crosslang-verifier original.ts rewritten.rs`; no manifest is required. See the [README](../README.md).
+
 A manifest explicitly pairs two standalone functions; the CLI does not guess migration alignments. Start by copying one of the 40 committed fixture directories. Each source must be at most 64 KiB; a manifest at most 128 KiB.
 
 ```json

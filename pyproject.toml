@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "crosslang-verifier"
 version = "0.1.0"
-description = "Find behavioral differences in cross-language rewrites."
+description = "Dump and compare syntax trees from two source files."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"

@@ -14,6 +14,7 @@ from .engine import analyze
 from .models import InputError, load_pair
 from .reporting import ConsoleReporter, JsonReporter
 from .runners import IsolatedRunner
+from .syntax import main as syntax_main
 
 
 def parser() -> argparse.ArgumentParser:
@@ -40,7 +41,7 @@ def parser() -> argparse.ArgumentParser:
     return result
 
 
-def main(argv: list[str] | None = None) -> int:
+def behavioral_main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     try:
         runner = IsolatedRunner(args.backend, args.timeout, args.node_image, args.rust_image)
@@ -110,3 +111,10 @@ def main(argv: list[str] | None = None) -> int:
         else:
             print(f"crosslang-verifier: {exc}", file=sys.stderr)
         return 2
+
+
+def main(argv: list[str] | None = None) -> int:
+    arguments = sys.argv[1:] if argv is None else argv
+    if arguments and arguments[0] in {"compare", "suite"}:
+        return behavioral_main(arguments)
+    return syntax_main(arguments)

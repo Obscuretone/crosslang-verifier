@@ -37,6 +37,15 @@ jobs:
         run: |
           docker pull node:22-bookworm-slim
           docker pull rust:1-slim-bookworm
+      - name: Dump two files without a manifest
+        run: |
+          mkdir -p ci-evidence
+          ast_exit=0
+          crosslang-verifier examples/linkedin-error-fallback/original.ts \
+            examples/linkedin-error-fallback/migrated.rs \
+            --output-dir ci-evidence/asts --json-output ci-evidence/ast-comparison.json \
+            > ci-evidence/ast-console.txt || ast_exit=$?
+          test "$ast_exit" -eq 1
       - name: Lint and package
         run: |
           ruff check .

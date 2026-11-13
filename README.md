@@ -1,111 +1,58 @@
 # crosslang-verifier
 
-**Find behavioral differences in cross-language rewrites.**
+Dump and compare the syntax trees of two files.
 
 [![CI](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml/badge.svg)](https://github.com/Obscuretone/crosslang-verifier/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-purple.svg)](LICENSE)
 
-A Python CLI for finding **bounded, reproducible semantic regressions in TypeScript-to-Rust migrations**. Tree-sitter parses both languages; language adapters normalize supported code into a shared IR; a resolution gate and extensible rules generate candidates; isolated Node and Cargo runners check the actual implementations.
-
-This MVP checks primitive truthiness and fallback behavior. **It never claims full semantic equivalence.** No-difference results describe only the recorded candidates under the declared assumptions.
-
-```typescript
-// TypeScript                         // Rust
-return x || 10;                       // x.unwrap_or(10.0)
+```sh
+crosslang-verifier original.ts rewritten.rs
 ```
 
-For a present `0`, TypeScript returns `10` while Rust returns `0`. The same mismatch can involve `false`, `""`, `-0`, and `NaN`. Nullish `??` is different: it preserves present falsy values. Rust `unwrap_or` evaluates its argument eagerly; this MVP permits literal defaults only and does not analyze side effects.
+That's the basic workflow. It prints both Tree-sitter trees and a unified syntax diff.
 
-## Run it
+## Install
 
-Requirements: Python 3.11+, Docker for isolated execution, and downloaded Node/Rust images. Supported hosts are Linux and macOS. Parsing and static reports need neither Node nor Rust installed on the host.
+Python 3.11+:
 
 ```sh
 git clone https://github.com/Obscuretone/crosslang-verifier.git
 cd crosslang-verifier
-python3 -m venv .venv
-. .venv/bin/activate
-pip install -e '.[dev]' -c requirements-dev.lock
-docker pull node:22-bookworm-slim
-docker pull rust:1-slim-bookworm
-
-# Static prediction only; never labeled a confirmed difference.
-crosslang-verifier compare fixtures/regressions/01-zero-count/manifest.json
-
-# Execute the original functions. Exit 1 means a confirmed difference.
-crosslang-verifier compare fixtures/regressions/01-zero-count/manifest.json \
-  --execute --json-output evidence/example.json
-
-# A suite exits 0 when every labeled fixture meets its expectation.
-crosslang-verifier suite fixtures --execute --json-output evidence/corpus.json
+pip install -e .
 ```
 
-Use `--format json` for machine-readable stdout. The module entry point also works: `python -m crosslang_verifier`. Docker images are never downloaded implicitly during a probe. Override image tags with `--node-image` / `--rust-image`; use digest-pinned images for reproducibility.
+The two-file command uses the Tree-sitter Python dependencies. It needs no manifest, type assumptions, Node, Cargo, Docker or running server. It parses the supplied files without executing them. Supported extensions: `.ts`, `.tsx`, `.rs`; either file can be any supported type.
 
-For **trusted code only**, `--execute --backend local` uses installed Node 22.18+ and Cargo/Rust in fresh temporary projects. This backend runs with your host permissions. It is not a security sandbox.
+## Save the ASTs
 
-## Evidence and interpretation
+```sh
+crosslang-verifier original.ts rewritten.rs --output-dir asts
+```
 
-| Status | Meaning |
-| --- | --- |
-| `unsupported` | Parsing, supported syntax, resolution, mapping, or rule eligibility failed. No semantic conclusion. |
-| `static_warning` | A resolved rule predicts a candidate mismatch; implementations have not been run. |
-| `static_checked` | No candidate mismatch predicted; implementations have not been run. |
-| `confirmed_difference` | Both implementations ran successfully and produced different normalized outputs for a recorded input. |
-| `no_difference_observed` | Both implementations ran and matched on the recorded candidates only. |
-| `inconclusive` | A runtime, compiler, timeout, output, or runner-protocol failure prevented comparison. |
+This writes `asts/left.ast.json`, `asts/right.ast.json` and `asts/diff.txt`. Each tree includes node types, child fields, token/literal text, source positions and a source hash. Operators and punctuation are retained, so differences such as `||` versus `??` do not disappear.
 
-Compare exit codes: `0` static check/warning or no observed difference, `1` confirmed difference, `2` unsupported/inconclusive/input error. Static warnings deliberately do not fail CI. Suite exit codes: `0` expectations met (or static-only checks complete), `1` executed expectation mismatch, `2` unsupported/inconclusive/input error. A static suite does **not** count expectations as passed.
+For both trees and their comparison in one JSON document:
 
-Each JSON report contains source and manifest SHA-256 hashes, source spans, declared assumptions, resolution provenance, candidate inputs, commands, stdout/stderr, observations and counterexamples. Numeric tags preserve `NaN`, infinities and signed zero; null and undefined remain distinct inputs and are explicitly mapped to Rust `None`. Numeric equality follows normalized binary64 values, with NaNs equal for comparison and `-0` distinct from `+0`.
+```sh
+crosslang-verifier original.ts rewritten.rs --format json > comparison.json
+```
 
-The committed [evidence](evidence/README.md) records actual checks, tool versions, limitations and reproducible reports. There are **20 synthetic known regressions and 20 preserving controls** with per-case descriptions and designated regression witnesses. They are a focused correctness corpus, not a production benchmark or a measure of general detection accuracy.
+Exit codes: `0` for matching syntax trees, `1` for different trees, `2` for input/parse errors. The diff ignores positions and whitespace between tokens. It preserves names, literals, operators and comments. Positions use one-based lines and UTF-8 byte columns, with exclusive end positions.
 
-[Renamed-package validation](evidence/renamed/RESULTS.md): **184 tests passed on each of Python 3.11/local and Python 3.13/Docker**, with all 40 corpus expectations and all four LinkedIn demo checks met. Docker-job statement coverage was **95.0%**. [Original validation](evidence/RESULTS.md) and developer-host limitations remain preserved separately.
+These are language-specific Tree-sitter syntax trees. Different languages normally produce different trees; inspect the emitted structures and diff to compare them. Matching trees do not prove behavioral equivalence.
 
-## Resolution is mandatory
+## Optional deeper checks
 
-The MVP resolver uses **explicit fixture assumptions**, not a TypeScript type checker or rust-analyzer. A parsed annotation or a method named `unwrap_or` alone cannot authorize a semantic rule. A manifest must assert the primitive TypeScript type, Rust `Option` type, standard library method identity, input mapping and justification. These assertions are checked against supported annotations and bound to reviewed source hashes. Assertions remain the author's responsibility; compiler verification is reported as `false`.
-
-Read [the manifest and supported syntax guide](docs/USAGE.md) to add your own pair. The intentionally narrow adapter accepts standalone, single-parameter functions and literal fallbacks. Unsupported expressions are reported, never silently approximated.
+The original manifest-based `compare` and `suite` commands remain available for executing bounded TypeScript/Rust fallback checks. See [advanced usage](docs/ADVANCED.md). Historical [evidence](evidence/README.md), the [checked LinkedIn reproduction](examples/linkedin-error-fallback/), and the original 40-fixture corpus are preserved.
 
 ## Development
 
 ```sh
-# Fast unit/static checks; execution tests are explicitly skipped.
+pip install -e '.[dev]' -c requirements-dev.lock
 pytest -q
-
-# All tests, including real isolated Node and Cargo executions.
-pytest --run-integration --integration-backend=docker \
-  --cov=crosslang_verifier --cov-report=term-missing \
-  --cov-report=json:evidence/coverage.json --junitxml=evidence/pytest.xml
-
 ruff check .
 ruff format --check .
-python -m build
 ```
 
-CI runs all tests on Python 3.11 with local trusted fixture execution and Python 3.13 with Docker isolation, and uploads reports as artifacts. See [architecture](docs/ARCHITECTURE.md), [implementation plan and acceptance criteria](docs/IMPLEMENTATION_PLAN.md), [security boundaries](docs/SECURITY.md), [report contract](docs/REPORT_FORMAT.md), and [contributing](CONTRIBUTING.md).
-
-For compatibility, `obscuretone-diff` remains an alias for `crosslang-verifier`. Python integrations should import `crosslang_verifier`; the former `obscuretone_semantic_diff` import path is not retained.
-
-Historical evidence predates this rename and remains unchanged with its original names, hashes, commands, and GitHub run links.
-
-## Check the LinkedIn example
-
-The [independent error-fallback reproduction](examples/linkedin-error-fallback/) follows the
-LinkedIn discussion and the underlying GitHub migration report. It executes the TypeScript
-original, the regressed Rust fallback and a preserving Rust control over four explicit inputs:
-
-```sh
-python tools/check_linkedin_example.py --backend docker \
-  --json-output demo-evidence/linkedin-example.json
-```
-
-The checked script returns `0` when it observes the expected empty-string difference and the
-preserving control matches. It returns `2` for inconclusive execution, never a false pass.
-These are minimal examples; no audit of GitHub's production source is claimed.
-
-The context object injects adapters, resolution, candidates, rules and runners. Services are aliased to local variables at function entry. Protocols and a versioned report model provide extension points for more languages, compiler-backed resolution, SARIF reporters and GitHub Action integrations. Those integrations are future work, not advertised as shipped.
+Tree parsing and two-file CLI tests run locally without a container VM. GitHub Actions also runs the optional execution suite and retains its reports. See [architecture](docs/ARCHITECTURE.md) and [contributing](CONTRIBUTING.md).
 
 MIT licensed. Created and maintained by **ObscureTone**.
