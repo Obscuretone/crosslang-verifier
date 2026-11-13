@@ -118,6 +118,10 @@ def main(argv: list[str] | None = None) -> int:
     arguments = sys.argv[1:] if argv is None else argv
     if arguments and arguments[0] in {"compare", "suite"}:
         return behavioral_main(arguments)
+    if "--verify" in arguments:
+        from .verification import main as verification_main
+
+        return verification_main([arg for arg in arguments if arg != "--verify"])
     if "--raw" in arguments:
         return syntax_main([arg for arg in arguments if arg != "--raw"])
     return parity_main(arguments)

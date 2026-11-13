@@ -11,3 +11,4 @@ ruff==0.17.5
 tree-sitter==0.26.1
 tree-sitter-rust==0.24.2
 tree-sitter-typescript==0.23.2
+z3-solver==5.4.1.0

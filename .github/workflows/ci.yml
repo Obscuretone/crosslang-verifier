@@ -85,6 +85,11 @@ jobs:
         run: |
           crosslang-verifier suite fixtures --execute --backend=${{ matrix.backend }} \
             --json-output ci-evidence/corpus.json > ci-evidence/corpus-console.txt
+      - name: Reproduce functional verification experiments
+        run: |
+          python tools/check_functional_verification.py --backend=${{ matrix.backend }} \
+            --json-output ci-evidence/functional-verification.json \
+            > ci-evidence/functional-verification-console.txt
       - name: Record runtime provenance
         if: always()
         run: python tools/record_environment.py --backend=${{ matrix.backend }} --output ci-evidence/environment.json

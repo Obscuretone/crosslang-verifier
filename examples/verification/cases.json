@@ -1,0 +1,102 @@
+[
+  {
+    "id": "boolean-demorgan",
+    "expected": "verified_finite_domain",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "boolean-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "arithmetic",
+    "expected": "verified_model",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "redundant-branch",
+    "expected": "verified_model",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "rounding-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "solver-branch",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "string-nullish",
+    "expected": "verified_model",
+    "assume_option_mapping": true
+  },
+  {
+    "id": "string-falsy-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": true
+  },
+  {
+    "id": "string-falsy-preserved",
+    "expected": "verified_model",
+    "assume_option_mapping": true
+  },
+  {
+    "id": "finite-optional-boolean",
+    "expected": "verified_finite_domain",
+    "assume_option_mapping": true
+  },
+  {
+    "id": "bounded-loop",
+    "expected": "tested_agreement",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "remainder",
+    "expected": "tested_agreement",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "compile-error",
+    "expected": "inconclusive",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "type-mismatch",
+    "expected": "inconclusive",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "unresolved-method",
+    "expected": "inconclusive",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "string-equality",
+    "expected": "verified_model",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "signed-zero-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "nan-equality-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "local-call-rewrite",
+    "expected": "verified_finite_domain",
+    "assume_option_mapping": false
+  },
+  {
+    "id": "string-equality-regression",
+    "expected": "confirmed_difference",
+    "assume_option_mapping": false
+  }
+]

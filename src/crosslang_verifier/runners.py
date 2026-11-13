@@ -240,6 +240,10 @@ class IsolatedRunner:
                 for language in ("typescript", "rust")
             ]
 
+    def run_project(self, language: str, root: Path, count: int, domain: str) -> Execution:
+        """Run a generated dependency-free project through the same isolation/protocol."""
+        return self._run(language, root, count, domain)
+
     def _run(self, language: str, root: Path, count: int, domain: str) -> Execution:
         isolation = (
             "container: no network; read-only root and sources; unprivileged; bounded resources"

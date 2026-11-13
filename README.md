@@ -25,6 +25,23 @@ Typed standalone functions; renamed parameters and local variables; arithmetic, 
 crosslang-verifier examples/parity/equivalent.ts examples/parity/equivalent.rs
 ```
 
+## Does this verify a port's functionality?
+
+For a small supported subset, **yes, with a stated scope**. Add `--verify` to compile and run both original files:
+
+```sh
+crosslang-verifier before.ts after.rs --verify --json-output verification.json
+```
+
+Node/Cargo runner images must be installed for the default isolated Docker backend. `--backend local` runs trusted files on your host.
+
+- **VERIFIED_FINITE_DOMAIN** (`0`): all declared boolean input combinations ran and agreed.
+- **VERIFIED_MODEL** (`0`): the loop-free shared IR has no counterexample in its supported model, and native samples agreed. The source-to-model mapping remains an assumption.
+- **CONFIRMED_DIFFERENCE** (`1`): actual Node/Rust results differ; the report includes the input.
+- **TESTED_AGREEMENT** or **INCONCLUSIVE** (`2`): samples agreed without a proof, or verification could not finish.
+
+Different ASTs can still compute the same result. Matching ASTs can still fail compilation. [Experiments and exact limits](docs/VERIFICATION.md) explain what each result means.
+
 ## Fallbacks and limits
 
 For standard Rust Option methods and a TypeScript null/undefined-to-None mapping, explicitly assert that contract with `--assume-option-mapping`. Then `??` and `unwrap_or` can match, while `||` and an unfiltered `unwrap_or` have different fallback triggers. The report records the assumption. Unknown methods never silently become standard-library calls.
